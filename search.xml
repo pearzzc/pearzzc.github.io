@@ -402,62 +402,6 @@
       </tags>
   </entry>
   <entry>
-    <title>css简介</title>
-    <url>/2020/10/13/css%E7%AE%80%E4%BB%8B/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="css-简介"><a href="#css-简介" class="headerlink" title="css 简介"></a>css 简介</h1><p>CSS 指层叠样式表 (Cascading Style Sheets)</p>
-<ul>
-<li>样式定义如何显示 HTML 元素</li>
-<li>样式通常存储在样式表中</li>
-<li>把样式添加到 HTML 4.0 中，是为了解决内容与表现分离的问题</li>
-<li>外部样式表可以极大提高工作效率</li>
-<li>外部样式表通常存储在 CSS 文件中</li>
-<li>多个样式定义可层叠为一</li>
-<li>样式对网页中元素位置的排版进行像素级精确控制</li>
-</ul>
-<h3 id="CSS样式"><a href="#CSS样式" class="headerlink" title="CSS样式"></a>CSS样式</h3><p>HTML 标签原本被设计为用于定义文档内容，如下实例:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>这是一个标题<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>这是一个段落。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>样式表定义如何显示 HTML 元素，就像 HTML 3.2 的字体标签和颜色属性所起的作用那样。样式通常保存在外部的 .css 文件中。CSS样式表极大的提高了工作效率，通过仅仅编辑一个简单的 CSS 文档，外部样式表使你有能力同时改变站点中所有页面的布局和外观。</p>
-<p>为了解决这个问题，万维网联盟（W3C），这个非营利的标准化联盟，肩负起了 HTML 标准化的使命，并在 HTML 4.0 之外创造出样式（Style）。</p>
-<p>当代浏览器都支持 CSS 。</p>
-<h3 id="多页面应用同一个样式"><a href="#多页面应用同一个样式" class="headerlink" title="多页面应用同一个样式"></a>多页面应用同一个样式</h3><p>通常保存在外部的独立的.css文件（该文件不属于任何页面文件）可以在多个页面中使用同一个CSS样式表。通过在任何的页面文件中引用.css文件，你可以设置具有一致风格的多个页面。</p>
-<h3 id="样式层叠"><a href="#样式层叠" class="headerlink" title="样式层叠"></a>样式层叠</h3><p>样式层叠就是对一个元素多次设置同一个样式，这将使用最后一次设置的属性值。</p>
-<h3 id="样式层叠次序"><a href="#样式层叠次序" class="headerlink" title="样式层叠次序"></a>样式层叠次序</h3><p>当同一个 HTML 元素定义了多个样式时，应该使用哪个样式？</p>
-<p>一般而言，所有的样式会根据下面的规则层叠于一个新的虚拟样式表中，其中数字 4 拥有最高的优先权。</p>
-<ol>
-<li>浏览器缺省设置</li>
-<li>外部样式表</li>
-<li>内部样式表（位于 &lt;head&gt; 标签内部）</li>
-<li>内联样式（在 HTML 元素内部）</li>
-</ol>
-<p>因此，内联样式（在 HTML 元素内部）拥有最高的优先权，这意味着它将优先于以下的样式声明：&lt;head&gt; 标签中的样式声明，外部样式表中的样式声明，或者浏览器中的样式声明（缺省值）。</p>
-<h3 id="CSS-实例"><a href="#CSS-实例" class="headerlink" title="CSS 实例"></a>CSS 实例</h3><p>CSS 规则由两个主要的部分构成：选择器，以及一条或多条声明:</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">h1</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>选择器通常是您需要改变样式的 HTML 元素。</p>
-<p>每条声明由一个属性和一个值组成。<br>属性（property）是您希望设置的样式属性（style attribute）。每个属性有一个值。属性和值被冒号分开。</p>
-<p>CSS声明总是以分号(;)结束，声明组以大括号({})括起来:<br><code>p &#123;color:red;text-align:center;&#125;</code></p>
-<p>为了让CSS可读性更强，你可以每行只描述一个属性:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 使用内部样式表 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">      body &#123;</span><br><span class="line">        background-color: yellow;</span><br><span class="line">      &#125;</span><br><span class="line">      h1 &#123;</span><br><span class="line">        font-size: 36pt;</span><br><span class="line">      &#125;</span><br><span class="line">      h2 &#123;</span><br><span class="line">        color: blue;</span><br><span class="line">      &#125;</span><br><span class="line">      p &#123;</span><br><span class="line">        margin-left: 50px;</span><br><span class="line">      &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>This header is 36 pt<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>This header is blue<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>This paragraph has a left margin of 50 pixels<span class="tag">&lt;/<span class="name">p</span>&gt;</span> </span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="CSS-颜色值的写法"><a href="#CSS-颜色值的写法" class="headerlink" title="CSS 颜色值的写法"></a>CSS 颜色值的写法</h3><p>在描述颜色的时候，除了使用英文单词 red，我们还可以使用十六进制的颜色值 #ff0000：<br><code>p &#123; color: #ff0000; &#125; </code></p>
-<p>为了节约字节，我们可以使用 CSS 的缩写形式：<br><code>p &#123; color: #f00; &#125;</code>   </p>
-<p>我们还可以通过两种方法使用 RGB 值：<br><code>p &#123; color: rgb(255,0,0); &#125; p &#123; color: rgb(100%,0%,0%); &#125;</code></p>
-<p>提示：当使用 RGB 百分比时，即使当值为 0 时也要写百分比符号。但是在其他的情况下就不需要这么做了。比如说，当尺寸为 0 像素时，0 之后不需要使用 px 单位。</p>
-<h3 id="CSS-注释"><a href="#CSS-注释" class="headerlink" title="CSS 注释"></a>CSS 注释</h3><p>注释是用来解释你的代码，并且可以随意编辑它，浏览器会忽略它。</p>
-<p>CSS注释以 “/<em>“ 开始, 以 “</em>/“ 结束, 实例如下:</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*这是个注释*/</span></span><br><span class="line"><span class="selector-tag">p</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="attribute">text-align</span>:center;</span><br><span class="line">  <span class="comment">/*这是另一个注释*/</span></span><br><span class="line">  <span class="attribute">color</span>:black</span><br><span class="line">    font-family:arial;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>css</tag>
-        <tag>css简介</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>css背景-文字-字体</title>
     <url>/2020/10/25/css%E8%83%8C%E6%99%AF-%E6%96%87%E5%AD%97-%E5%AD%97%E4%BD%93/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="css-基础点"><a href="#css-基础点" class="headerlink" title="css 基础点"></a>css 基础点</h1><p>CSS 背景属性用于定义HTML元素的背景。</p>
@@ -675,6 +619,62 @@
       </tags>
   </entry>
   <entry>
+    <title>css简介</title>
+    <url>/2020/10/13/css%E7%AE%80%E4%BB%8B/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="css-简介"><a href="#css-简介" class="headerlink" title="css 简介"></a>css 简介</h1><p>CSS 指层叠样式表 (Cascading Style Sheets)</p>
+<ul>
+<li>样式定义如何显示 HTML 元素</li>
+<li>样式通常存储在样式表中</li>
+<li>把样式添加到 HTML 4.0 中，是为了解决内容与表现分离的问题</li>
+<li>外部样式表可以极大提高工作效率</li>
+<li>外部样式表通常存储在 CSS 文件中</li>
+<li>多个样式定义可层叠为一</li>
+<li>样式对网页中元素位置的排版进行像素级精确控制</li>
+</ul>
+<h3 id="CSS样式"><a href="#CSS样式" class="headerlink" title="CSS样式"></a>CSS样式</h3><p>HTML 标签原本被设计为用于定义文档内容，如下实例:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>这是一个标题<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>这是一个段落。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>样式表定义如何显示 HTML 元素，就像 HTML 3.2 的字体标签和颜色属性所起的作用那样。样式通常保存在外部的 .css 文件中。CSS样式表极大的提高了工作效率，通过仅仅编辑一个简单的 CSS 文档，外部样式表使你有能力同时改变站点中所有页面的布局和外观。</p>
+<p>为了解决这个问题，万维网联盟（W3C），这个非营利的标准化联盟，肩负起了 HTML 标准化的使命，并在 HTML 4.0 之外创造出样式（Style）。</p>
+<p>当代浏览器都支持 CSS 。</p>
+<h3 id="多页面应用同一个样式"><a href="#多页面应用同一个样式" class="headerlink" title="多页面应用同一个样式"></a>多页面应用同一个样式</h3><p>通常保存在外部的独立的.css文件（该文件不属于任何页面文件）可以在多个页面中使用同一个CSS样式表。通过在任何的页面文件中引用.css文件，你可以设置具有一致风格的多个页面。</p>
+<h3 id="样式层叠"><a href="#样式层叠" class="headerlink" title="样式层叠"></a>样式层叠</h3><p>样式层叠就是对一个元素多次设置同一个样式，这将使用最后一次设置的属性值。</p>
+<h3 id="样式层叠次序"><a href="#样式层叠次序" class="headerlink" title="样式层叠次序"></a>样式层叠次序</h3><p>当同一个 HTML 元素定义了多个样式时，应该使用哪个样式？</p>
+<p>一般而言，所有的样式会根据下面的规则层叠于一个新的虚拟样式表中，其中数字 4 拥有最高的优先权。</p>
+<ol>
+<li>浏览器缺省设置</li>
+<li>外部样式表</li>
+<li>内部样式表（位于 &lt;head&gt; 标签内部）</li>
+<li>内联样式（在 HTML 元素内部）</li>
+</ol>
+<p>因此，内联样式（在 HTML 元素内部）拥有最高的优先权，这意味着它将优先于以下的样式声明：&lt;head&gt; 标签中的样式声明，外部样式表中的样式声明，或者浏览器中的样式声明（缺省值）。</p>
+<h3 id="CSS-实例"><a href="#CSS-实例" class="headerlink" title="CSS 实例"></a>CSS 实例</h3><p>CSS 规则由两个主要的部分构成：选择器，以及一条或多条声明:</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">h1</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>选择器通常是您需要改变样式的 HTML 元素。</p>
+<p>每条声明由一个属性和一个值组成。<br>属性（property）是您希望设置的样式属性（style attribute）。每个属性有一个值。属性和值被冒号分开。</p>
+<p>CSS声明总是以分号(;)结束，声明组以大括号({})括起来:<br><code>p &#123;color:red;text-align:center;&#125;</code></p>
+<p>为了让CSS可读性更强，你可以每行只描述一个属性:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 使用内部样式表 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">      body &#123;</span><br><span class="line">        background-color: yellow;</span><br><span class="line">      &#125;</span><br><span class="line">      h1 &#123;</span><br><span class="line">        font-size: 36pt;</span><br><span class="line">      &#125;</span><br><span class="line">      h2 &#123;</span><br><span class="line">        color: blue;</span><br><span class="line">      &#125;</span><br><span class="line">      p &#123;</span><br><span class="line">        margin-left: 50px;</span><br><span class="line">      &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>This header is 36 pt<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>This header is blue<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>This paragraph has a left margin of 50 pixels<span class="tag">&lt;/<span class="name">p</span>&gt;</span> </span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="CSS-颜色值的写法"><a href="#CSS-颜色值的写法" class="headerlink" title="CSS 颜色值的写法"></a>CSS 颜色值的写法</h3><p>在描述颜色的时候，除了使用英文单词 red，我们还可以使用十六进制的颜色值 #ff0000：<br><code>p &#123; color: #ff0000; &#125; </code></p>
+<p>为了节约字节，我们可以使用 CSS 的缩写形式：<br><code>p &#123; color: #f00; &#125;</code>   </p>
+<p>我们还可以通过两种方法使用 RGB 值：<br><code>p &#123; color: rgb(255,0,0); &#125; p &#123; color: rgb(100%,0%,0%); &#125;</code></p>
+<p>提示：当使用 RGB 百分比时，即使当值为 0 时也要写百分比符号。但是在其他的情况下就不需要这么做了。比如说，当尺寸为 0 像素时，0 之后不需要使用 px 单位。</p>
+<h3 id="CSS-注释"><a href="#CSS-注释" class="headerlink" title="CSS 注释"></a>CSS 注释</h3><p>注释是用来解释你的代码，并且可以随意编辑它，浏览器会忽略它。</p>
+<p>CSS注释以 “/<em>“ 开始, 以 “</em>/“ 结束, 实例如下:</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*这是个注释*/</span></span><br><span class="line"><span class="selector-tag">p</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="attribute">text-align</span>:center;</span><br><span class="line">  <span class="comment">/*这是另一个注释*/</span></span><br><span class="line">  <span class="attribute">color</span>:black</span><br><span class="line">    font-family:arial;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+        <tag>css简介</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>css选择器</title>
     <url>/2020/10/18/css%E9%80%89%E6%8B%A9%E5%99%A8/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="CSS-选择器"><a href="#CSS-选择器" class="headerlink" title="CSS 选择器"></a>CSS 选择器</h1><h3 id="基础选择器"><a href="#基础选择器" class="headerlink" title="基础选择器"></a>基础选择器</h3><h5 id="元素（标签）选择器"><a href="#元素（标签）选择器" class="headerlink" title="元素（标签）选择器"></a>元素（标签）选择器</h5><p>元素选择器是指用HTML标签名称作为选择器，按标签名称分类，为页面中某一类标签指定统一的CSS样式。其基本语法格式如下：</p>
@@ -744,29 +744,6 @@
       <tags>
         <tag>css</tag>
         <tag>css 选择器</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo hello</title>
-    <url>/2021/05/16/hello-world/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<div class="tabs" id="test4"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#test4-1">第一個Tab</button></li><li class="tab"><button type="button" data-href="#test4-2"><i class="fab fa-apple-pay" style="text-align: center;"></i></button></li><li class="tab"><button type="button" data-href="#test4-3"><i class="fas fa-bomb"></i>炸彈</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="test4-1"><p><strong>tab名字為第一個Tab</strong></p><button type="button" class="tab-to-top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="test4-2"><p><strong>只有圖標 沒有Tab名字</strong></p><button type="button" class="tab-to-top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="test4-3"><p><strong>名字+icon</strong></p><button type="button" class="tab-to-top"><i class="fas fa-arrow-up"></i></button></div></div></div>
-
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>hexo 入门</tag>
       </tags>
   </entry>
   <entry>
@@ -852,6 +829,29 @@
       <tags>
         <tag>html</tag>
         <tag>html 基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo hello</title>
+    <url>/2021/05/16/hello-world/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<div class="tabs" id="test4"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#test4-1">第一個Tab</button></li><li class="tab"><button type="button" data-href="#test4-2"><i class="fab fa-apple-pay" style="text-align: center;"></i></button></li><li class="tab"><button type="button" data-href="#test4-3"><i class="fas fa-bomb"></i>炸彈</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="test4-1"><p><strong>tab名字為第一個Tab</strong></p><button type="button" class="tab-to-top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="test4-2"><p><strong>只有圖標 沒有Tab名字</strong></p><button type="button" class="tab-to-top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="test4-3"><p><strong>名字+icon</strong></p><button type="button" class="tab-to-top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>hexo 入门</tag>
       </tags>
   </entry>
   <entry>
