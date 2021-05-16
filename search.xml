@@ -458,78 +458,6 @@
       </tags>
   </entry>
   <entry>
-    <title>css选择器</title>
-    <url>/2020/10/18/css%E9%80%89%E6%8B%A9%E5%99%A8/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="CSS-选择器"><a href="#CSS-选择器" class="headerlink" title="CSS 选择器"></a>CSS 选择器</h1><h3 id="基础选择器"><a href="#基础选择器" class="headerlink" title="基础选择器"></a>基础选择器</h3><h5 id="元素（标签）选择器"><a href="#元素（标签）选择器" class="headerlink" title="元素（标签）选择器"></a>元素（标签）选择器</h5><p>元素选择器是指用HTML标签名称作为选择器，按标签名称分类，为页面中某一类标签指定统一的CSS样式。其基本语法格式如下：</p>
-<p><strong>标签名{属性1:属性值1; 属性2:属性值2; 属性3:属性值3; }</strong>  </p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;<span class="attribute">height</span>: <span class="number">300px</span>&#125;</span><br></pre></td></tr></table></figure>
-
-<p>标签选择器最大的优点是<strong>能快速为页面中同类型的标签统一样式</strong>，同时这也是他的缺点，不能设计差异化样式。</p>
-<p>标签选择器 可以把某一类标签全部选择出来</p>
-<h5 id="类选择器"><a href="#类选择器" class="headerlink" title="类选择器"></a>类选择器</h5><p>类选择器使用“.”（英文点号）进行标识，后面紧跟类名，其基本语法格式如下：</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.name</span>  &#123;<span class="attribute">height</span>: <span class="number">300px</span>&#125;</span><br></pre></td></tr></table></figure>
-
-<p>在指定的标签上赋予class 属性的值 ：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;name&quot;</span>&gt;</span></span><br><span class="line"> 	金但是</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>类选择器最大的优势是<strong>可以为元素对象定义单独或相同的样式。</strong> 可以选择一个或者多个标签。</p>
-<h5 id="id-选择器"><a href="#id-选择器" class="headerlink" title="id 选择器"></a>id 选择器</h5><p>id选择器使用“#”进行标识，后面紧跟id名，其基本语法格式如下：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#id名&#123;属性1:属性值1; 属性2:属性值2; 属性3:属性值3; &#125;</span></span><br></pre></td></tr></table></figure>
-
-<p>该语法中，id名即为HTML元素的id属性值，大多数HTML元素都可以定义id属性，元素的id值是唯一的，只能对应于文档中某一个具体的元素。</p>
-<p>用法基本和类选择器相同。</p>
-<h5 id="通配符选择器"><a href="#通配符选择器" class="headerlink" title="通配符选择器"></a>通配符选择器</h5><p>通配符   选择器用“*”号表示，他是所有选择器中作用范围最广的，能匹配页面中所有的元素。其基本语法格式如下：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">* &#123; 属性1:属性值1; 属性2:属性值2; 属性3:属性值3; &#125;</span><br></pre></td></tr></table></figure>
-<p>例如下面的代码，使用通配符选择器定义CSS样式，清除所有HTML标记的默认边距。</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span>;                    <span class="comment">/* 定义外边距*/</span></span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;                   <span class="comment">/* 定义内边距*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="id选择器和类选择器区别"><a href="#id选择器和类选择器区别" class="headerlink" title="id选择器和类选择器区别"></a>id选择器和类选择器区别</h5><p>W3C标准规定，在同一个页面内，不允许有相同名字的id对象出现，但是允许相同名字的class。<br>类选择器（class） 好比人的名字，  是可以多次重复使用的， 比如  张伟  王伟  李伟  李娜<br>id选择器     好比人的身份证号码，  全中国是唯一的， 不得重复。 只能使用一次。<br>*<strong>id选择器和类选择器最大的不同在于 使用次数上。*</strong></p>
-<h5 id="多类名选择器-重点"><a href="#多类名选择器-重点" class="headerlink" title="多类名选择器(重点)"></a>多类名选择器(重点)</h5><p>我们可以给标签指定多个类名，从而达到更多的选择目的。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1. 样式显示效果跟HTML元素中的类名先后顺序没有关系,受CSS样式书写的上下顺序有关。</span><br><span class="line">2. 各个类名中间用空格隔开。</span><br></pre></td></tr></table></figure>
-
-<p>多类名选择器在后期布局比较复杂的情况下，还是较多使用的。</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;pink fontWeight font20&quot;</span>&gt;</span>亚瑟<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;font20&quot;</span>&gt;</span>刘备<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;font14 pink&quot;</span>&gt;</span>安其拉<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;font14&quot;</span>&gt;</span>貂蝉<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>多个类名简单的就是给 一个人 取多个外号， 叫道任何一个外号都是它。</p>
-<h3 id="CSS复合选择器"><a href="#CSS复合选择器" class="headerlink" title="CSS复合选择器"></a>CSS复合选择器</h3><p>复合选择器是由两个或多个基础选择器，通过不同的方式组合而成的,目的是为了可以选择更准确更精细的目标元素标签。</p>
-<h5 id="交集选择器"><a href="#交集选择器" class="headerlink" title="交集选择器"></a>交集选择器</h5><p>交集选择器由两个选择器构成，其中第一个为标签选择器，第二个为class选择器，两个选择器之间不能有空格，如h3.special。</p>
-<p>交集选择器 是 并且的意思。 即…又…的意思</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">比如：   <span class="selector-tag">p</span><span class="selector-class">.one</span>   选择的是： 类名为 <span class="selector-class">.one</span>  的 段落标签。  </span><br></pre></td></tr></table></figure>
-
-<p>用的相对来说比较少，不太建议使用。</p>
-<h5 id="并集选择器"><a href="#并集选择器" class="headerlink" title="并集选择器"></a>并集选择器</h5><p>并集选择器（CSS选择器分组）是各个选择器通过<strong>逗号</strong>连接而成的，任何形式的选择器（包括标签选择器、class类选择器id选择器等），都可以作为并集选择器的一部分。如果某些选择器定义的样式完全相同，或部分相同，就可以利用并集选择器为它们定义相同的CSS样式。</p>
-<p>并集选择器  和 的意思，  就是说，只要逗号隔开的，所有选择器都会执行后面样式。</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">比如  <span class="selector-class">.one</span>, <span class="selector-tag">p</span> , <span class="selector-id">#test</span> &#123;<span class="attribute">color</span>: <span class="number">#F00</span>;&#125;  表示   <span class="selector-class">.one</span> 和 <span class="selector-tag">p</span>  和 <span class="selector-id">#test</span> 这三个选择器都会执行颜色为红色。  通常用于集体声明。  他和他，在一起， 在一起    一起的意思</span><br></pre></td></tr></table></figure>
-
-<h5 id="后台选择器"><a href="#后台选择器" class="headerlink" title="后台选择器"></a>后台选择器</h5><p>后代选择器又称为包含选择器，用来选择元素或元素组的后代，其写法就是把外层标签写在前面，内层标签写在后面，中间用空格分隔。当标签发生嵌套时，内层标签就成为外层标签的后代。</p>
-<figure class="highlight"><table><tr><td class="code"><pre><span class="line">.one p &#123;color： #eee;&#125;  作用结果在： class名 为 one 下 所有的p 标签</span><br></pre></td></tr></table></figure>
-
-<h5 id="子元素选择器"><a href="#子元素选择器" class="headerlink" title="子元素选择器"></a>子元素选择器</h5><p>子元素选择器只能选择作为某元素子元素的元素。其写法就是把父级标签写在前面，子级标签写在后面，中间跟一个 &gt; 进行连接，注意，符号左右两侧各保留一个空格。</p>
-<p>白话：  这里的子 指的是 亲儿子  不包含孙子 重孙子之类。</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">比如：  <span class="selector-class">.demo</span> &gt; <span class="selector-tag">h3</span> &#123;<span class="attribute">color</span>: red;&#125;   说明  <span class="selector-tag">h3</span> 一定是<span class="selector-tag">demo</span> 亲儿子。  <span class="selector-tag">demo</span> 元素包含着<span class="selector-tag">h3</span>。</span><br></pre></td></tr></table></figure>
-
-<h5 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器"></a>伪类选择器</h5><p>伪类选择器用于向某些选择器添加特殊的效果。比如给链接添加特殊效果， 比如可以选择 第1个，第n个元素。</p>
-<p>类  .one</p>
-<p>伪类 :link</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">为了和我们刚才学的类选择器相区别，  类选择器是一个点 比如 <span class="selector-class">.demo</span> &#123;&#125;   而我们的伪类 用 2个</span><br></pre></td></tr></table></figure>
-
-<p>比较常用的伪类选择器</p>
-<h6 id="链接伪类选择器"><a href="#链接伪类选择器" class="headerlink" title="链接伪类选择器"></a>链接伪类选择器</h6><ul>
-<li>:link /* 未访问的链接 */</li>
-<li>:visited /* 已访问的链接 */</li>
-<li>:hover /* 鼠标移动到链接上 */</li>
-<li>:active /* 选定的链接 */<br>代码示例:<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">a</span> &#123;   <span class="comment">/* a是标签选择器  所有的链接 */</span></span><br><span class="line">  <span class="attribute">font-weight</span>: <span class="number">700</span>;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">  <span class="attribute">color</span>: gray;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> &#123;   <span class="comment">/* :hover 是链接伪类选择器 鼠标经过 */</span></span><br><span class="line">  <span class="attribute">color</span>: red; <span class="comment">/*  鼠标经过的时候，由原来的 灰色 变成了红色 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>css</tag>
-        <tag>css 选择器</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>css背景-文字-字体</title>
     <url>/2020/10/25/css%E8%83%8C%E6%99%AF-%E6%96%87%E5%AD%97-%E5%AD%97%E4%BD%93/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="css-基础点"><a href="#css-基础点" class="headerlink" title="css 基础点"></a>css 基础点</h1><p>CSS 背景属性用于定义HTML元素的背景。</p>
@@ -744,6 +672,78 @@
       <tags>
         <tag>css</tag>
         <tag>css背景文字字体基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>css选择器</title>
+    <url>/2020/10/18/css%E9%80%89%E6%8B%A9%E5%99%A8/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="CSS-选择器"><a href="#CSS-选择器" class="headerlink" title="CSS 选择器"></a>CSS 选择器</h1><h3 id="基础选择器"><a href="#基础选择器" class="headerlink" title="基础选择器"></a>基础选择器</h3><h5 id="元素（标签）选择器"><a href="#元素（标签）选择器" class="headerlink" title="元素（标签）选择器"></a>元素（标签）选择器</h5><p>元素选择器是指用HTML标签名称作为选择器，按标签名称分类，为页面中某一类标签指定统一的CSS样式。其基本语法格式如下：</p>
+<p><strong>标签名{属性1:属性值1; 属性2:属性值2; 属性3:属性值3; }</strong>  </p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;<span class="attribute">height</span>: <span class="number">300px</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<p>标签选择器最大的优点是<strong>能快速为页面中同类型的标签统一样式</strong>，同时这也是他的缺点，不能设计差异化样式。</p>
+<p>标签选择器 可以把某一类标签全部选择出来</p>
+<h5 id="类选择器"><a href="#类选择器" class="headerlink" title="类选择器"></a>类选择器</h5><p>类选择器使用“.”（英文点号）进行标识，后面紧跟类名，其基本语法格式如下：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.name</span>  &#123;<span class="attribute">height</span>: <span class="number">300px</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在指定的标签上赋予class 属性的值 ：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;name&quot;</span>&gt;</span></span><br><span class="line"> 	金但是</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>类选择器最大的优势是<strong>可以为元素对象定义单独或相同的样式。</strong> 可以选择一个或者多个标签。</p>
+<h5 id="id-选择器"><a href="#id-选择器" class="headerlink" title="id 选择器"></a>id 选择器</h5><p>id选择器使用“#”进行标识，后面紧跟id名，其基本语法格式如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#id名&#123;属性1:属性值1; 属性2:属性值2; 属性3:属性值3; &#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>该语法中，id名即为HTML元素的id属性值，大多数HTML元素都可以定义id属性，元素的id值是唯一的，只能对应于文档中某一个具体的元素。</p>
+<p>用法基本和类选择器相同。</p>
+<h5 id="通配符选择器"><a href="#通配符选择器" class="headerlink" title="通配符选择器"></a>通配符选择器</h5><p>通配符   选择器用“*”号表示，他是所有选择器中作用范围最广的，能匹配页面中所有的元素。其基本语法格式如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">* &#123; 属性1:属性值1; 属性2:属性值2; 属性3:属性值3; &#125;</span><br></pre></td></tr></table></figure>
+<p>例如下面的代码，使用通配符选择器定义CSS样式，清除所有HTML标记的默认边距。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span>;                    <span class="comment">/* 定义外边距*/</span></span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;                   <span class="comment">/* 定义内边距*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="id选择器和类选择器区别"><a href="#id选择器和类选择器区别" class="headerlink" title="id选择器和类选择器区别"></a>id选择器和类选择器区别</h5><p>W3C标准规定，在同一个页面内，不允许有相同名字的id对象出现，但是允许相同名字的class。<br>类选择器（class） 好比人的名字，  是可以多次重复使用的， 比如  张伟  王伟  李伟  李娜<br>id选择器     好比人的身份证号码，  全中国是唯一的， 不得重复。 只能使用一次。<br>*<strong>id选择器和类选择器最大的不同在于 使用次数上。*</strong></p>
+<h5 id="多类名选择器-重点"><a href="#多类名选择器-重点" class="headerlink" title="多类名选择器(重点)"></a>多类名选择器(重点)</h5><p>我们可以给标签指定多个类名，从而达到更多的选择目的。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1. 样式显示效果跟HTML元素中的类名先后顺序没有关系,受CSS样式书写的上下顺序有关。</span><br><span class="line">2. 各个类名中间用空格隔开。</span><br></pre></td></tr></table></figure>
+
+<p>多类名选择器在后期布局比较复杂的情况下，还是较多使用的。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;pink fontWeight font20&quot;</span>&gt;</span>亚瑟<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;font20&quot;</span>&gt;</span>刘备<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;font14 pink&quot;</span>&gt;</span>安其拉<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;font14&quot;</span>&gt;</span>貂蝉<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>多个类名简单的就是给 一个人 取多个外号， 叫道任何一个外号都是它。</p>
+<h3 id="CSS复合选择器"><a href="#CSS复合选择器" class="headerlink" title="CSS复合选择器"></a>CSS复合选择器</h3><p>复合选择器是由两个或多个基础选择器，通过不同的方式组合而成的,目的是为了可以选择更准确更精细的目标元素标签。</p>
+<h5 id="交集选择器"><a href="#交集选择器" class="headerlink" title="交集选择器"></a>交集选择器</h5><p>交集选择器由两个选择器构成，其中第一个为标签选择器，第二个为class选择器，两个选择器之间不能有空格，如h3.special。</p>
+<p>交集选择器 是 并且的意思。 即…又…的意思</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">比如：   <span class="selector-tag">p</span><span class="selector-class">.one</span>   选择的是： 类名为 <span class="selector-class">.one</span>  的 段落标签。  </span><br></pre></td></tr></table></figure>
+
+<p>用的相对来说比较少，不太建议使用。</p>
+<h5 id="并集选择器"><a href="#并集选择器" class="headerlink" title="并集选择器"></a>并集选择器</h5><p>并集选择器（CSS选择器分组）是各个选择器通过<strong>逗号</strong>连接而成的，任何形式的选择器（包括标签选择器、class类选择器id选择器等），都可以作为并集选择器的一部分。如果某些选择器定义的样式完全相同，或部分相同，就可以利用并集选择器为它们定义相同的CSS样式。</p>
+<p>并集选择器  和 的意思，  就是说，只要逗号隔开的，所有选择器都会执行后面样式。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">比如  <span class="selector-class">.one</span>, <span class="selector-tag">p</span> , <span class="selector-id">#test</span> &#123;<span class="attribute">color</span>: <span class="number">#F00</span>;&#125;  表示   <span class="selector-class">.one</span> 和 <span class="selector-tag">p</span>  和 <span class="selector-id">#test</span> 这三个选择器都会执行颜色为红色。  通常用于集体声明。  他和他，在一起， 在一起    一起的意思</span><br></pre></td></tr></table></figure>
+
+<h5 id="后台选择器"><a href="#后台选择器" class="headerlink" title="后台选择器"></a>后台选择器</h5><p>后代选择器又称为包含选择器，用来选择元素或元素组的后代，其写法就是把外层标签写在前面，内层标签写在后面，中间用空格分隔。当标签发生嵌套时，内层标签就成为外层标签的后代。</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">.one p &#123;color： #eee;&#125;  作用结果在： class名 为 one 下 所有的p 标签</span><br></pre></td></tr></table></figure>
+
+<h5 id="子元素选择器"><a href="#子元素选择器" class="headerlink" title="子元素选择器"></a>子元素选择器</h5><p>子元素选择器只能选择作为某元素子元素的元素。其写法就是把父级标签写在前面，子级标签写在后面，中间跟一个 &gt; 进行连接，注意，符号左右两侧各保留一个空格。</p>
+<p>白话：  这里的子 指的是 亲儿子  不包含孙子 重孙子之类。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">比如：  <span class="selector-class">.demo</span> &gt; <span class="selector-tag">h3</span> &#123;<span class="attribute">color</span>: red;&#125;   说明  <span class="selector-tag">h3</span> 一定是<span class="selector-tag">demo</span> 亲儿子。  <span class="selector-tag">demo</span> 元素包含着<span class="selector-tag">h3</span>。</span><br></pre></td></tr></table></figure>
+
+<h5 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器"></a>伪类选择器</h5><p>伪类选择器用于向某些选择器添加特殊的效果。比如给链接添加特殊效果， 比如可以选择 第1个，第n个元素。</p>
+<p>类  .one</p>
+<p>伪类 :link</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">为了和我们刚才学的类选择器相区别，  类选择器是一个点 比如 <span class="selector-class">.demo</span> &#123;&#125;   而我们的伪类 用 2个</span><br></pre></td></tr></table></figure>
+
+<p>比较常用的伪类选择器</p>
+<h6 id="链接伪类选择器"><a href="#链接伪类选择器" class="headerlink" title="链接伪类选择器"></a>链接伪类选择器</h6><ul>
+<li>:link /* 未访问的链接 */</li>
+<li>:visited /* 已访问的链接 */</li>
+<li>:hover /* 鼠标移动到链接上 */</li>
+<li>:active /* 选定的链接 */<br>代码示例:<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">a</span> &#123;   <span class="comment">/* a是标签选择器  所有的链接 */</span></span><br><span class="line">  <span class="attribute">font-weight</span>: <span class="number">700</span>;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">  <span class="attribute">color</span>: gray;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> &#123;   <span class="comment">/* :hover 是链接伪类选择器 鼠标经过 */</span></span><br><span class="line">  <span class="attribute">color</span>: red; <span class="comment">/*  鼠标经过的时候，由原来的 灰色 变成了红色 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+        <tag>css 选择器</tag>
       </tags>
   </entry>
   <entry>
