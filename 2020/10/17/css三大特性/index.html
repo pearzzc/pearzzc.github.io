@@ -1,0 +1,176 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>css三大特性 | 学习笔记</title><meta name="keywords" content="css,css 三大特性"><meta name="author" content="pearzzc"><meta name="copyright" content="pearzzc"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="CSS 三大特性层叠 继承 优先级 是我们学习CSS 必须掌握的三个特性。 CSS层叠性所谓层叠性是指多种CSS样式的叠加。 是浏览器处理冲突的一个能力,如果一个属性通过两个相同选择器设置到同一个元素上，那么这个时候一个属性就会将另一个属性层叠掉 比如先给某个标签指定了内部文字颜色为红色，接着又指定了颜色为蓝色，此时出现一个标签指定了相同样式不同值的情况，这就是样式冲突。  就近原则 一般情况下，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="css三大特性">
+<meta property="og:url" content="http://gitee/pearzzc.com/2020/10/17/css%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7/index.html">
+<meta property="og:site_name" content="学习笔记">
+<meta property="og:description" content="CSS 三大特性层叠 继承 优先级 是我们学习CSS 必须掌握的三个特性。 CSS层叠性所谓层叠性是指多种CSS样式的叠加。 是浏览器处理冲突的一个能力,如果一个属性通过两个相同选择器设置到同一个元素上，那么这个时候一个属性就会将另一个属性层叠掉 比如先给某个标签指定了内部文字颜色为红色，接着又指定了颜色为蓝色，此时出现一个标签指定了相同样式不同值的情况，这就是样式冲突。  就近原则 一般情况下，">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gitee.com/pearzzc/picgo/raw/master/2019122210303221-scaled.jpeg">
+<meta property="article:published_time" content="2020-10-17T00:59:18.000Z">
+<meta property="article:modified_time" content="2021-05-16T00:25:03.761Z">
+<meta property="article:author" content="pearzzc">
+<meta property="article:tag" content="css">
+<meta property="article:tag" content="css 三大特性">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/pearzzc/picgo/raw/master/2019122210303221-scaled.jpeg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://gitee/pearzzc.com/2020/10/17/css%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  hexoversion: '5.4.0',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  ClickShowText: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isSidebar: true,
+  postUpdate: '2021-05-16 08:25:03'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {
+  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }
+})()</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="https://portrait.gitee.com/uploads/avatars/user/1616/4850172_pearzzc_1578975676.png!avatar100" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">15</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">18</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">3</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 娱乐</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/galleryGroup/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div id="body-wrap"><div id="sidebar"><i class="fas fa-arrow-right on" id="toggle-sidebar"></i><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#CSS-%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7"><span class="toc-number">1.</span> <span class="toc-text">CSS 三大特性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS%E5%B1%82%E5%8F%A0%E6%80%A7"><span class="toc-number">1.0.1.</span> <span class="toc-text">CSS层叠性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS%E7%BB%A7%E6%89%BF%E6%80%A7"><span class="toc-number">1.0.2.</span> <span class="toc-text">CSS继承性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS%E4%BC%98%E5%85%88%E7%BA%A7"><span class="toc-number">1.0.3.</span> <span class="toc-text">CSS优先级</span></a></li></ol></li></ol></li></ol></div></div></div><header class="post-bg" id="page-header" style="background-image: url(https://gitee.com/pearzzc/picgo/raw/master/2019122210303221-scaled.jpeg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">学习笔记</a></span><span id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 娱乐</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/galleryGroup/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><div id="post-title"><div class="posttitle">css三大特性</div></div><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-10-17T00:59:18.000Z" title="发表于 2020-10-17 08:59:18">2020-10-17</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-05-16T00:25:03.761Z" title="更新于 2021-05-16 08:25:03">2021-05-16</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout_post" id="content-inner"><article id="post"><div class="post-content" id="article-container"><h1 id="CSS-三大特性"><a href="#CSS-三大特性" class="headerlink" title="CSS 三大特性"></a>CSS 三大特性</h1><p>层叠 继承 优先级 是我们学习CSS 必须掌握的三个特性。</p>
+<h3 id="CSS层叠性"><a href="#CSS层叠性" class="headerlink" title="CSS层叠性"></a>CSS层叠性</h3><p>所谓层叠性是指多种CSS样式的<strong>叠加</strong>。</p>
+<p>是浏览器处理冲突的一个能力,如果一个属性通过两个相同选择器设置到同一个元素上，那么这个时候一个属性就会将另一个属性层叠掉</p>
+<p>比如先给某个标签指定了内部文字颜色为红色，接着又指定了颜色为蓝色，此时出现一个标签指定了相同样式不同值的情况，这就是样式冲突。  就近原则</p>
+<p>一般情况下，如果出现样式冲突，则会按照CSS书写的顺序，以最后的样式为准。</p>
+<ol>
+<li>样式冲突，遵循的原则是就近原则。 那个样式离着结构近，就执行那个样式。</li>
+<li>样式不冲突，不会层叠</li>
+</ol>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CSS最后的执行口诀：  长江后浪推前浪，前浪死在沙滩上。</span><br></pre></td></tr></table></figure>
+
+<h3 id="CSS继承性"><a href="#CSS继承性" class="headerlink" title="CSS继承性"></a>CSS继承性</h3><p>所谓继承性是指书写CSS样式表时，子标签会继承父标签的某些样式，如文本颜色和字号。想要设置一个可继承的属性，只需将它应用于父元素即可。</p>
+<p>简单的理解就是：  子承父业。</p>
+<p>注意：<strong>恰当地使用继承可以简化代码，降低CSS样式的复杂性。子元素可以继承父元素的样式（text-，font-，line-这些元素开头的都可以继承，以及color属性）</strong></p>
+<h3 id="CSS优先级"><a href="#CSS优先级" class="headerlink" title="CSS优先级"></a>CSS优先级</h3><p>定义CSS样式时，经常出现两个或更多规则应用在同一元素上，这时就会出现优先级的问题。<img src="https://gitee.com/pearzzc/picgo/raw/master/pngsucai_99302_e06535.png" style="zoom: 5%;" /></p>
+<p>在考虑权重时，初学者还需要注意一些特殊的情况，具体如下：</p>
+<p><strong>继承样式的权重为0。即在嵌套结构中，不管父元素样式的权重多大，被子元素继承时，他的权重都为0，也就是说子元素定义的样式会覆盖继承来的样式。</strong></p>
+<p><strong>行内样式优先。应用style属性的元素，其行内样式的权重非常高，可以理解为远大于100。总之，他拥有比上面提高的选择器都大的优先级。</strong></p>
+<p><strong>权重相同时，CSS遵循就近原则。也就是说靠近元素的样式具有最大的优先级，或者说排在最后的样式优先级最大。</strong></p>
+<p><strong>CSS定义了一个!important命令，该命令被赋予最大的优先级。也就是说不管权重如何以及样式位置的远近，!important都具有最大优先级。</strong></p>
+<p>总结优先级：</p>
+<ol>
+<li>使用了 !important声明的规则。</li>
+<li>内嵌在 HTML 元素的 style属性里面的声明。</li>
+<li>使用了 ID 选择器的规则。</li>
+<li>使用了类选择器、属性选择器、伪元素和伪类选择器的规则。</li>
+<li>使用了元素选择器的规则。</li>
+<li>只包含一个通用选择器的规则。</li>
+<li>同一类选择器则遵循就近原则。</li>
+</ol>
+</div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">pearzzc</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://gitee/pearzzc.com/2020/10/17/css%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7/">http://gitee/pearzzc.com/2020/10/17/css%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://gitee/pearzzc.com" target="_blank">学习笔记</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/css/">css</a><a class="post-meta__tags" href="/tags/css-%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7/">css 三大特性</a></div><div class="post_share"><div class="social-share" data-image="https://gitee.com/pearzzc/picgo/raw/master/2019122210303221-scaled.jpeg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2020/10/17/css%E6%A0%87%E7%AD%BE%E7%B1%BB%E5%9E%8B/"><img class="prev-cover" src="https://gitee.com/pearzzc/picgo/raw/master/city_rocks_mountains_134667_1920x1080.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">css标签类型</div></div></a></div><div class="next-post pull-right"><a href="/2020/10/13/css%E7%AE%80%E4%BB%8B/"><img class="next-cover" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">css简介</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2020/10/19/css三种布局模式/" title="css三种布局模式"><img class="cover" src="https://gitee.com/pearzzc/picgo/raw/master/mountains_rocks_taiga_190180_1920x1080.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-10-19</div><div class="title">css三种布局模式</div></div></a></div><div><a href="/2020/10/18/css伪元素/" title="css伪元素"><img class="cover" src="https://gitee.com/pearzzc/picgo/raw/master/neon_squares_flowers_131525_1920x1080.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-10-18</div><div class="title">css伪元素</div></div></a></div><div><a href="/2020/10/23/css基础核心/" title="css基础核心"><img class="cover" src="https://gitee.com/pearzzc/picgo/raw/master/architecture_lights_bottom_view_190798_1920x1080.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-10-23</div><div class="title">css基础核心</div></div></a></div><div><a href="/2020/10/13/css简介/" title="css简介"><img class="cover" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-10-13</div><div class="title">css简介</div></div></a></div><div><a href="/2020/10/25/css背景-文字-字体/" title="css背景-文字-字体"><img class="cover" src="https://gitee.com/pearzzc/picgo/raw/master/paint_in_water_background-wallpaper-1920x1080.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-10-25</div><div class="title">css背景-文字-字体</div></div></a></div><div><a href="/2020/10/18/css选择器/" title="css选择器"><img class="cover" src="https://gitee.com/pearzzc/picgo/raw/master/couple_hands_tenderness_118110_1920x1080.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-10-18</div><div class="title">css选择器</div></div></a></div></div></div></article></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By pearzzc</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><section id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="false"></script></div></body></html>

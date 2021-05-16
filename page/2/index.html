@@ -1,0 +1,215 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>学习笔记 - 废物</title><meta name="author" content="pearzzc"><meta name="copyright" content="pearzzc"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="学习过程的记录">
+<meta property="og:type" content="website">
+<meta property="og:title" content="学习笔记">
+<meta property="og:url" content="http://gitee/pearzzc.com/page/2/index.html">
+<meta property="og:site_name" content="学习笔记">
+<meta property="og:description" content="学习过程的记录">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://portrait.gitee.com/uploads/avatars/user/1616/4850172_pearzzc_1578975676.png!avatar100">
+<meta property="article:author" content="pearzzc">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://portrait.gitee.com/uploads/avatars/user/1616/4850172_pearzzc_1578975676.png!avatar100"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://gitee/pearzzc.com/page/2/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  hexoversion: '5.4.0',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  ClickShowText: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isSidebar: false,
+  postUpdate: '2021-05-16 10:09:09'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {
+  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }
+})()</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="https://portrait.gitee.com/uploads/avatars/user/1616/4850172_pearzzc_1578975676.png!avatar100" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">15</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">18</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">3</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 娱乐</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/galleryGroup/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(https://gitee.com/pearzzc/picgo/raw/master/cover6.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">学习笔记</a></span><span id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 娱乐</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/galleryGroup/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site-title">学习笔记</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/pearzzc" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:pearzzc@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title=""><i class="fa fa-rss"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout_page" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/10/19/css%E4%B8%89%E7%A7%8D%E5%B8%83%E5%B1%80%E6%A8%A1%E5%BC%8F/" title="css三种布局模式">     <img class="post_bg" src="https://gitee.com/pearzzc/picgo/raw/master/mountains_rocks_taiga_190180_1920x1080.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="css三种布局模式"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/10/19/css%E4%B8%89%E7%A7%8D%E5%B8%83%E5%B1%80%E6%A8%A1%E5%BC%8F/" title="css三种布局模式">css三种布局模式</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-10-19T12:12:17.000Z" title="发表于 2020-10-19 20:12:17">2020-10-19</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span></div><div class="content">CSS的三种布局模式CSS常见的三种布局模式有：流动模型（Flow）、浮动模型 (Float)、层模型（Layer） 它们是网页样式的本质流动布局模型
+块状元素自上而下占行：块状元素都会在所处的包含元素内自上而下按顺序垂直延伸分布，因为在默认状态下，块状元素的宽度都为100%。实际上，块状元素都会以行的形式占据位置。
+
+行内元素从左到右：在流动模型下，内联元素都会在所处的包含元素内从左到右水平分布显示。
+
+
+浮动布局模型任何元素在默认情况下是不能浮动的，但可以用 CSS 定义为浮动，如 div、p、table、img 等元素都可以被定义为浮动。
+12345678div&#123;  width:200px;  height:200px;  border:2px red solid;  float:left; //设置浮动 &#125;&lt;div id=&quot;div1&quot;&gt;&lt;/div&gt;&lt;div id=&quot;div2&quot;&gt;&lt;/div&gt;
+
+层模型层模型有三种形式：1、绝对定位(position: absolute)2、 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/10/18/css%E4%BC%AA%E5%85%83%E7%B4%A0/" title="css伪元素">     <img class="post_bg" src="https://gitee.com/pearzzc/picgo/raw/master/neon_squares_flowers_131525_1920x1080.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="css伪元素"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/10/18/css%E4%BC%AA%E5%85%83%E7%B4%A0/" title="css伪元素">css伪元素</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-10-18T01:00:50.000Z" title="发表于 2020-10-18 09:00:50">2020-10-18</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span></div><div class="content">css 常见伪类和伪元素伪类和伪元素是为了格式化 DOM 树以外的信息而被引入的。
+伪类是用来添加一些选择器的特殊效果。由于状态的变化是非静态的，所以元素达到一个特定状态时，它可能得到一个伪类的样式；当状态改变时，它又会失去这个样式。由此可以看出，和class有些类似，但它是基于文档之外的抽象，所以叫伪类。
+一个 CSS 伪类是以一个冒号(:)作为前缀，被添加到一个选择器末尾的关键字，可以让指定的元素在特定的状态呈现指定的样式。例如 :hover，当用户悬停在指定元素时，可以在这个状态给指定元素添加相应的样式，是在 DOM 树无法描述的状态下才能给元素添加样式。
+常用的伪类选择器:first - child:first-child 表示在一组兄弟元素中的第一个元素。:first-child 伪类来选择元素的第一个子元素 注意：在IE8的之前版本必须声明， 这样 :first-child 才能生效。
+ 123456789&lt;div class=&quot;bulb-lists&quot;&gt;  &lt;div class=&quot;bulb&quot;&gt;&lt;/div& ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/10/18/css%E9%80%89%E6%8B%A9%E5%99%A8/" title="css选择器">     <img class="post_bg" src="https://gitee.com/pearzzc/picgo/raw/master/couple_hands_tenderness_118110_1920x1080.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="css选择器"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/10/18/css%E9%80%89%E6%8B%A9%E5%99%A8/" title="css选择器">css选择器</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-10-18T00:47:05.000Z" title="发表于 2020-10-18 08:47:05">2020-10-18</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span></div><div class="content">CSS 选择器基础选择器元素（标签）选择器元素选择器是指用HTML标签名称作为选择器，按标签名称分类，为页面中某一类标签指定统一的CSS样式。其基本语法格式如下：
+标签名{属性1:属性值1; 属性2:属性值2; 属性3:属性值3; }  
+1div &#123;height: 300px&#125;
+
+标签选择器最大的优点是能快速为页面中同类型的标签统一样式，同时这也是他的缺点，不能设计差异化样式。
+标签选择器 可以把某一类标签全部选择出来
+类选择器类选择器使用“.”（英文点号）进行标识，后面紧跟类名，其基本语法格式如下：
+1.name  &#123;height: 300px&#125;
+
+在指定的标签上赋予class 属性的值 ：
+123&lt;div class=&quot;name&quot;&gt; 	金但是&lt;/div&gt;
+
+类选择器最大的优势是可以为元素对象定义单独或相同的样式。 可以选择一个或者多个标签。
+id 选择器id选择器使用“#”进行标识，后面紧跟id名，其基本语法格式如下：
+1#id名&#123;属性1:属性值1; 属性2:属性值2; 属性3:属性值3 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/10/17/css%E6%A0%87%E7%AD%BE%E7%B1%BB%E5%9E%8B/" title="css标签类型">     <img class="post_bg" src="https://gitee.com/pearzzc/picgo/raw/master/city_rocks_mountains_134667_1920x1080.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="css标签类型"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/10/17/css%E6%A0%87%E7%AD%BE%E7%B1%BB%E5%9E%8B/" title="css标签类型">css标签类型</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-10-17T01:12:55.000Z" title="发表于 2020-10-17 09:12:55">2020-10-17</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span></div><div class="content">CSS 选择器基础选择器元素（标签）选择器元素选择器是指用HTML标签名称作为选择器，按标签名称分类，为页面中某一类标签指定统一的CSS样式。其基本语法格式如下：
+标签名{属性1:属性值1; 属性2:属性值2; 属性3:属性值3; }  
+1div &#123;height: 300px&#125;
+
+标签选择器最大的优点是能快速为页面中同类型的标签统一样式，同时这也是他的缺点，不能设计差异化样式。
+标签选择器 可以把某一类标签全部选择出来
+类选择器类选择器使用“.”（英文点号）进行标识，后面紧跟类名，其基本语法格式如下：
+1.name  &#123;height: 300px&#125;
+
+在指定的标签上赋予class 属性的值 ：
+123&lt;div class=&quot;name&quot;&gt; 	金梅屁&lt;/div&gt;
+
+类选择器最大的优势是可以为元素对象定义单独或相同的样式。 可以选择一个或者多个标签。
+id 选择器id选择器使用“#”进行标识，后面紧跟id名，其基本语法格式如下：
+1#id名&#123;属性1:属性值1; 属性2:属性值2; 属性3:属性值3 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/10/17/css%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7/" title="css三大特性">     <img class="post_bg" src="https://gitee.com/pearzzc/picgo/raw/master/2019122210303221-scaled.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="css三大特性"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/10/17/css%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7/" title="css三大特性">css三大特性</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-10-17T00:59:18.000Z" title="发表于 2020-10-17 08:59:18">2020-10-17</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span></div><div class="content">CSS 三大特性层叠 继承 优先级 是我们学习CSS 必须掌握的三个特性。
+CSS层叠性所谓层叠性是指多种CSS样式的叠加。
+是浏览器处理冲突的一个能力,如果一个属性通过两个相同选择器设置到同一个元素上，那么这个时候一个属性就会将另一个属性层叠掉
+比如先给某个标签指定了内部文字颜色为红色，接着又指定了颜色为蓝色，此时出现一个标签指定了相同样式不同值的情况，这就是样式冲突。  就近原则
+一般情况下，如果出现样式冲突，则会按照CSS书写的顺序，以最后的样式为准。
+
+样式冲突，遵循的原则是就近原则。 那个样式离着结构近，就执行那个样式。
+样式不冲突，不会层叠
+
+1CSS最后的执行口诀：  长江后浪推前浪，前浪死在沙滩上。
+
+CSS继承性所谓继承性是指书写CSS样式表时，子标签会继承父标签的某些样式，如文本颜色和字号。想要设置一个可继承的属性，只需将它应用于父元素即可。
+简单的理解就是：  子承父业。
+注意：恰当地使用继承可以简化代码，降低CSS样式的复杂性。子元素可以继承父元素的样式（text-，font-，line-这些元素开头的都可以继承，以及color属性）
+CSS优先级定义CSS样式 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/10/13/css%E7%AE%80%E4%BB%8B/" title="css简介">     <img class="post_bg" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="css简介"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/10/13/css%E7%AE%80%E4%BB%8B/" title="css简介">css简介</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-10-13T14:02:46.000Z" title="发表于 2020-10-13 22:02:46">2020-10-13</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span></div><div class="content">css 简介CSS 指层叠样式表 (Cascading Style Sheets)
+
+样式定义如何显示 HTML 元素
+样式通常存储在样式表中
+把样式添加到 HTML 4.0 中，是为了解决内容与表现分离的问题
+外部样式表可以极大提高工作效率
+外部样式表通常存储在 CSS 文件中
+多个样式定义可层叠为一
+样式对网页中元素位置的排版进行像素级精确控制
+
+CSS样式HTML 标签原本被设计为用于定义文档内容，如下实例:
+12&lt;h1&gt;这是一个标题&lt;/h1&gt;&lt;p&gt;这是一个段落。&lt;/p&gt;
+样式表定义如何显示 HTML 元素，就像 HTML 3.2 的字体标签和颜色属性所起的作用那样。样式通常保存在外部的 .css 文件中。CSS样式表极大的提高了工作效率，通过仅仅编辑一个简单的 CSS 文档，外部样式表使你有能力同时改变站点中所有页面的布局和外观。
+为了解决这个问题，万维网联盟（W3C），这个非营利的标准化联盟，肩负起了 HTML 标准化的使命，并在 HTML 4.0 之外创造出样式（Style）。
+当代浏览器都支持 CSS 。
+多页面应用同一个样 ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="https://portrait.gitee.com/uploads/avatars/user/1616/4850172_pearzzc_1578975676.png!avatar100" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">pearzzc</div><div class="author-info__description">学习过程的记录</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length_num">15</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length_num">18</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length_num">3</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/pearzzc"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/pearzzc" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:pearzzc@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title=""><i class="fa fa-rss"></i></a></div></div></div><div class="sticky_layout"><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/05/16/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/" title="数据库基础"><img src="https://gitee.com/pearzzc/picgo/raw/master/10770235_105040005000_2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数据库基础"/></a><div class="content"><a class="title" href="/2021/05/16/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80/" title="数据库基础">数据库基础</a><time datetime="2021-05-16T02:02:13.000Z" title="发表于 2021-05-16 10:02:13">2021-05-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/05/16/hello-world/" title="hexo hello"><img src="https://gitee.com/pearzzc/picgo/raw/master/wolf_silhouette_moon_night_118727_300x168.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="hexo hello"/></a><div class="content"><a class="title" href="/2021/05/16/hello-world/" title="hexo hello">hexo hello</a><time datetime="2021-05-16T00:25:03.761Z" title="发表于 2021-05-16 08:25:03">2021-05-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/11/15/xlwings%E6%93%8D%E6%8E%A7excel%E8%A1%A8%E6%A0%BC/" title="xlwings操控excel表格"><img src="https://gitee.com/pearzzc/picgo/raw/master/lake_trees_fog_192600_1920x1080.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="xlwings操控excel表格"/></a><div class="content"><a class="title" href="/2020/11/15/xlwings%E6%93%8D%E6%8E%A7excel%E8%A1%A8%E6%A0%BC/" title="xlwings操控excel表格">xlwings操控excel表格</a><time datetime="2020-11-15T02:59:23.000Z" title="发表于 2020-11-15 10:59:23">2020-11-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/11/05/cssBFC%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E7%82%B9/" title="css盒子模型(BFC)"><img src="https://gitee.com/pearzzc/picgo/raw/master/lake_forest_autumn_191698_1920x1080.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="css盒子模型(BFC)"/></a><div class="content"><a class="title" href="/2020/11/05/cssBFC%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E7%82%B9/" title="css盒子模型(BFC)">css盒子模型(BFC)</a><time datetime="2020-11-05T04:56:48.000Z" title="发表于 2020-11-05 12:56:48">2020-11-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/10/25/css%E8%83%8C%E6%99%AF-%E6%96%87%E5%AD%97-%E5%AD%97%E4%BD%93/" title="css背景-文字-字体"><img src="https://gitee.com/pearzzc/picgo/raw/master/paint_in_water_background-wallpaper-1920x1080.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="css背景-文字-字体"/></a><div class="content"><a class="title" href="/2020/10/25/css%E8%83%8C%E6%99%AF-%E6%96%87%E5%AD%97-%E5%AD%97%E4%BD%93/" title="css背景-文字-字体">css背景-文字-字体</a><time datetime="2020-10-25T06:57:42.000Z" title="发表于 2020-10-25 14:57:42">2020-10-25</time></div></div></div></div></div><div class="card-widget card-categories"><div class="card-content"><div class="item-headline"><i class="fas fa-folder-open"></i><span>分类</span></div><ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/python/"><span class="card-category-list-name">python</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/"><span class="card-category-list-name">前端</span><span class="card-category-list-count">13</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"><span class="card-category-list-name">数据库</span><span class="card-category-list-count">1</span></a></li>
+            
+            </ul></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/BFC/" style="font-size: 1.1em; color: #999">BFC</a> <a href="/tags/css/" style="font-size: 1.5em; color: #99a9bf">css</a> <a href="/tags/css-%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7/" style="font-size: 1.1em; color: #999">css 三大特性</a> <a href="/tags/css-%E4%BC%AA%E5%85%83%E7%B4%A0/" style="font-size: 1.1em; color: #999">css 伪元素</a> <a href="/tags/css-%E5%B8%83%E5%B1%80%E6%A8%A1%E5%BC%8F/" style="font-size: 1.1em; color: #999">css 布局模式</a> <a href="/tags/css-%E9%80%89%E6%8B%A9%E5%99%A8/" style="font-size: 1.1em; color: #999">css 选择器</a> <a href="/tags/css%E5%9F%BA%E7%A1%80%E6%A0%B8%E5%BF%83/" style="font-size: 1.1em; color: #999">css基础核心</a> <a href="/tags/css%E6%A0%87%E7%AD%BE%E7%B1%BB%E5%9E%8B/" style="font-size: 1.1em; color: #999">css标签类型</a> <a href="/tags/css%E7%AE%80%E4%BB%8B/" style="font-size: 1.1em; color: #999">css简介</a> <a href="/tags/css%E8%83%8C%E6%99%AF%E6%96%87%E5%AD%97%E5%AD%97%E4%BD%93%E5%9F%BA%E7%A1%80/" style="font-size: 1.1em; color: #999">css背景文字字体基础</a> <a href="/tags/hexo-%E5%85%A5%E9%97%A8/" style="font-size: 1.1em; color: #999">hexo 入门</a> <a href="/tags/html/" style="font-size: 1.3em; color: #99a1ac">html</a> <a href="/tags/html-%E5%9F%BA%E7%A1%80/" style="font-size: 1.1em; color: #999">html 基础</a> <a href="/tags/html-%E7%AE%80%E4%BB%8B/" style="font-size: 1.1em; color: #999">html 简介</a> <a href="/tags/html-%E9%87%8D%E8%A6%81%E6%A6%82%E5%BF%B5/" style="font-size: 1.1em; color: #999">html 重要概念</a> <a href="/tags/sql/" style="font-size: 1.1em; color: #999">sql</a> <a href="/tags/xlwings/" style="font-size: 1.1em; color: #999">xlwings</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 1.1em; color: #999">数据库</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/05/"><span class="card-archive-list-date">五月 2021</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/11/"><span class="card-archive-list-date">十一月 2020</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/10/"><span class="card-archive-list-date">十月 2020</span><span class="card-archive-list-count">11</span></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">15</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-05-16T02:09:09.226Z"></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By pearzzc</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><section id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="false"></script></div></body></html>
