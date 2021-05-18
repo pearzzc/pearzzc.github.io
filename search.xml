@@ -1,74 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>css三大特性</title>
-    <url>/2020/10/17/css%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="CSS-三大特性"><a href="#CSS-三大特性" class="headerlink" title="CSS 三大特性"></a>CSS 三大特性</h1><p>层叠 继承 优先级 是我们学习CSS 必须掌握的三个特性。</p>
-<h3 id="CSS层叠性"><a href="#CSS层叠性" class="headerlink" title="CSS层叠性"></a>CSS层叠性</h3><p>所谓层叠性是指多种CSS样式的<strong>叠加</strong>。</p>
-<p>是浏览器处理冲突的一个能力,如果一个属性通过两个相同选择器设置到同一个元素上，那么这个时候一个属性就会将另一个属性层叠掉</p>
-<p>比如先给某个标签指定了内部文字颜色为红色，接着又指定了颜色为蓝色，此时出现一个标签指定了相同样式不同值的情况，这就是样式冲突。  就近原则</p>
-<p>一般情况下，如果出现样式冲突，则会按照CSS书写的顺序，以最后的样式为准。</p>
-<ol>
-<li>样式冲突，遵循的原则是就近原则。 那个样式离着结构近，就执行那个样式。</li>
-<li>样式不冲突，不会层叠</li>
-</ol>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">CSS最后的执行口诀：  长江后浪推前浪，前浪死在沙滩上。</span><br></pre></td></tr></table></figure>
-
-<h3 id="CSS继承性"><a href="#CSS继承性" class="headerlink" title="CSS继承性"></a>CSS继承性</h3><p>所谓继承性是指书写CSS样式表时，子标签会继承父标签的某些样式，如文本颜色和字号。想要设置一个可继承的属性，只需将它应用于父元素即可。</p>
-<p>简单的理解就是：  子承父业。</p>
-<p>注意：<strong>恰当地使用继承可以简化代码，降低CSS样式的复杂性。子元素可以继承父元素的样式（text-，font-，line-这些元素开头的都可以继承，以及color属性）</strong></p>
-<h3 id="CSS优先级"><a href="#CSS优先级" class="headerlink" title="CSS优先级"></a>CSS优先级</h3><p>定义CSS样式时，经常出现两个或更多规则应用在同一元素上，这时就会出现优先级的问题。<img src="https://gitee.com/pearzzc/picgo/raw/master/pngsucai_99302_e06535.png" style="zoom: 5%;" /></p>
-<p>在考虑权重时，初学者还需要注意一些特殊的情况，具体如下：</p>
-<p><strong>继承样式的权重为0。即在嵌套结构中，不管父元素样式的权重多大，被子元素继承时，他的权重都为0，也就是说子元素定义的样式会覆盖继承来的样式。</strong></p>
-<p><strong>行内样式优先。应用style属性的元素，其行内样式的权重非常高，可以理解为远大于100。总之，他拥有比上面提高的选择器都大的优先级。</strong></p>
-<p><strong>权重相同时，CSS遵循就近原则。也就是说靠近元素的样式具有最大的优先级，或者说排在最后的样式优先级最大。</strong></p>
-<p><strong>CSS定义了一个!important命令，该命令被赋予最大的优先级。也就是说不管权重如何以及样式位置的远近，!important都具有最大优先级。</strong></p>
-<p>总结优先级：</p>
-<ol>
-<li>使用了 !important声明的规则。</li>
-<li>内嵌在 HTML 元素的 style属性里面的声明。</li>
-<li>使用了 ID 选择器的规则。</li>
-<li>使用了类选择器、属性选择器、伪元素和伪类选择器的规则。</li>
-<li>使用了元素选择器的规则。</li>
-<li>只包含一个通用选择器的规则。</li>
-<li>同一类选择器则遵循就近原则。</li>
-</ol>
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>css</tag>
-        <tag>css 三大特性</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>css三种布局模式</title>
-    <url>/2020/10/19/css%E4%B8%89%E7%A7%8D%E5%B8%83%E5%B1%80%E6%A8%A1%E5%BC%8F/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="CSS的三种布局模式"><a href="#CSS的三种布局模式" class="headerlink" title="CSS的三种布局模式"></a>CSS的三种布局模式</h1><h2 id="CSS常见的三种布局模式有：流动模型（Flow）、浮动模型-Float-、层模型（Layer）-它们是网页样式的本质"><a href="#CSS常见的三种布局模式有：流动模型（Flow）、浮动模型-Float-、层模型（Layer）-它们是网页样式的本质" class="headerlink" title="CSS常见的三种布局模式有：流动模型（Flow）、浮动模型 (Float)、层模型（Layer） 它们是网页样式的本质"></a>CSS常见的三种布局模式有：流动模型（Flow）、浮动模型 (Float)、层模型（Layer） 它们是网页样式的本质</h2><h3 id="流动布局模型"><a href="#流动布局模型" class="headerlink" title="流动布局模型"></a>流动布局模型</h3><ol>
-<li><p>块状元素自上而下占行：块状元素都会在所处的包含元素内自上而下按顺序垂直延伸分布，因为在默认状态下，块状元素的宽度都为100%。实际上，块状元素都会以行的形式占据位置。</p>
-</li>
-<li><p>行内元素从左到右：在流动模型下，内联元素都会在所处的包含元素内从左到右水平分布显示。</p>
-</li>
-</ol>
-<h3 id="浮动布局模型"><a href="#浮动布局模型" class="headerlink" title="浮动布局模型"></a>浮动布局模型</h3><p>任何元素在默认情况下是不能浮动的，但可以用 CSS 定义为浮动，如 div、p、table、img 等元素都可以被定义为浮动。</p>
-<figure class="highlight"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span>&#123;</span><br><span class="line">  <span class="attribute">width</span>:<span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">height</span>:<span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">border</span>:<span class="number">2px</span> red solid;</span><br><span class="line">  float:left; //设置浮动 </span><br><span class="line">&#125;</span><br><span class="line">&lt;div id=&quot;div1&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;div id=&quot;div2&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="层模型"><a href="#层模型" class="headerlink" title="层模型"></a>层模型</h3><p><strong>层模型有三种形式：</strong><br>1、绝对定位(position: absolute)<br>2、相对定位(position: relative)<br>3、固定定位(position: fixed)</p>
-<p>实质就是常用的定位</p>
-<h3 id="标准流-、定位-和浮动的区别"><a href="#标准流-、定位-和浮动的区别" class="headerlink" title="标准流 、定位 和浮动的区别"></a>标准流 、定位 和浮动的区别</h3><p>标准流 是指就是按按照盒子模型排布，是标准的文档流。</p>
-<p>定位和浮动都和文档流有很大区别，但是也有不同（重点）：</p>
-<p>二者之中最大的差别就是<strong>位置保留</strong>。<br>再简而言之，float只是行内的 左右的改变，如果后面的元素不清楚浮动clear:both的话 会影响后面元素的位置，而positon定位的影响比较广，既能定义个容器的定位也能定义一个容器里的任意定位，而不是像float一样处于一个平面级的，它是可认识改变的。尤其是position:absolute；和fixed2个都是固定任意位置，一个不随页面滚动而改变原来位置，一个随页面滚动而改变但相对位置不改变。</p>
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>css</tag>
-        <tag>css 布局模式</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>css盒子模型(BFC)</title>
     <url>/2020/11/05/cssBFC%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="盒子模型（重点）"><a href="#盒子模型（重点）" class="headerlink" title="盒子模型（重点）"></a>盒子模型（重点）</h1><h3 id="CSS就三个大模块：-盒子模型-、-浮动-、-定位，其余的都是细节。"><a href="#CSS就三个大模块：-盒子模型-、-浮动-、-定位，其余的都是细节。" class="headerlink" title="CSS就三个大模块： 盒子模型 、 浮动 、 定位，其余的都是细节。"></a>CSS就三个大模块： 盒子模型 、 浮动 、 定位，其余的都是细节。</h3><p>所谓盒子模型就是把HTML页面中的元素看作是一个矩形的盒子，也就是一个盛装内容的容器。盒模型又称框模型（Box Model），<strong>每个矩形都由元素的内容、内边距（padding）、边框（border）和外边距（margin）组成。</strong></p>
@@ -159,6 +91,48 @@
       </tags>
   </entry>
   <entry>
+    <title>css三大特性</title>
+    <url>/2020/10/17/css%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="CSS-三大特性"><a href="#CSS-三大特性" class="headerlink" title="CSS 三大特性"></a>CSS 三大特性</h1><p>层叠 继承 优先级 是我们学习CSS 必须掌握的三个特性。</p>
+<h3 id="CSS层叠性"><a href="#CSS层叠性" class="headerlink" title="CSS层叠性"></a>CSS层叠性</h3><p>所谓层叠性是指多种CSS样式的<strong>叠加</strong>。</p>
+<p>是浏览器处理冲突的一个能力,如果一个属性通过两个相同选择器设置到同一个元素上，那么这个时候一个属性就会将另一个属性层叠掉</p>
+<p>比如先给某个标签指定了内部文字颜色为红色，接着又指定了颜色为蓝色，此时出现一个标签指定了相同样式不同值的情况，这就是样式冲突。  就近原则</p>
+<p>一般情况下，如果出现样式冲突，则会按照CSS书写的顺序，以最后的样式为准。</p>
+<ol>
+<li>样式冲突，遵循的原则是就近原则。 那个样式离着结构近，就执行那个样式。</li>
+<li>样式不冲突，不会层叠</li>
+</ol>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">CSS最后的执行口诀：  长江后浪推前浪，前浪死在沙滩上。</span><br></pre></td></tr></table></figure>
+
+<h3 id="CSS继承性"><a href="#CSS继承性" class="headerlink" title="CSS继承性"></a>CSS继承性</h3><p>所谓继承性是指书写CSS样式表时，子标签会继承父标签的某些样式，如文本颜色和字号。想要设置一个可继承的属性，只需将它应用于父元素即可。</p>
+<p>简单的理解就是：  子承父业。</p>
+<p>注意：<strong>恰当地使用继承可以简化代码，降低CSS样式的复杂性。子元素可以继承父元素的样式（text-，font-，line-这些元素开头的都可以继承，以及color属性）</strong></p>
+<h3 id="CSS优先级"><a href="#CSS优先级" class="headerlink" title="CSS优先级"></a>CSS优先级</h3><p>定义CSS样式时，经常出现两个或更多规则应用在同一元素上，这时就会出现优先级的问题。<img src="https://gitee.com/pearzzc/picgo/raw/master/pngsucai_99302_e06535.png" style="zoom: 5%;" /></p>
+<p>在考虑权重时，初学者还需要注意一些特殊的情况，具体如下：</p>
+<p><strong>继承样式的权重为0。即在嵌套结构中，不管父元素样式的权重多大，被子元素继承时，他的权重都为0，也就是说子元素定义的样式会覆盖继承来的样式。</strong></p>
+<p><strong>行内样式优先。应用style属性的元素，其行内样式的权重非常高，可以理解为远大于100。总之，他拥有比上面提高的选择器都大的优先级。</strong></p>
+<p><strong>权重相同时，CSS遵循就近原则。也就是说靠近元素的样式具有最大的优先级，或者说排在最后的样式优先级最大。</strong></p>
+<p><strong>CSS定义了一个!important命令，该命令被赋予最大的优先级。也就是说不管权重如何以及样式位置的远近，!important都具有最大优先级。</strong></p>
+<p>总结优先级：</p>
+<ol>
+<li>使用了 !important声明的规则。</li>
+<li>内嵌在 HTML 元素的 style属性里面的声明。</li>
+<li>使用了 ID 选择器的规则。</li>
+<li>使用了类选择器、属性选择器、伪元素和伪类选择器的规则。</li>
+<li>使用了元素选择器的规则。</li>
+<li>只包含一个通用选择器的规则。</li>
+<li>同一类选择器则遵循就近原则。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+        <tag>css 三大特性</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>css伪元素</title>
     <url>/2020/10/18/css%E4%BC%AA%E5%85%83%E7%B4%A0/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="css-常见伪类和伪元素"><a href="#css-常见伪类和伪元素" class="headerlink" title="css 常见伪类和伪元素"></a>css 常见伪类和伪元素</h1><p>伪类和伪元素是为了格式化 DOM 树以外的信息而被引入的。</p>
@@ -217,6 +191,32 @@
       <tags>
         <tag>css</tag>
         <tag>css 伪元素</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>css三种布局模式</title>
+    <url>/2020/10/19/css%E4%B8%89%E7%A7%8D%E5%B8%83%E5%B1%80%E6%A8%A1%E5%BC%8F/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="CSS的三种布局模式"><a href="#CSS的三种布局模式" class="headerlink" title="CSS的三种布局模式"></a>CSS的三种布局模式</h1><h2 id="CSS常见的三种布局模式有：流动模型（Flow）、浮动模型-Float-、层模型（Layer）-它们是网页样式的本质"><a href="#CSS常见的三种布局模式有：流动模型（Flow）、浮动模型-Float-、层模型（Layer）-它们是网页样式的本质" class="headerlink" title="CSS常见的三种布局模式有：流动模型（Flow）、浮动模型 (Float)、层模型（Layer） 它们是网页样式的本质"></a>CSS常见的三种布局模式有：流动模型（Flow）、浮动模型 (Float)、层模型（Layer） 它们是网页样式的本质</h2><h3 id="流动布局模型"><a href="#流动布局模型" class="headerlink" title="流动布局模型"></a>流动布局模型</h3><ol>
+<li><p>块状元素自上而下占行：块状元素都会在所处的包含元素内自上而下按顺序垂直延伸分布，因为在默认状态下，块状元素的宽度都为100%。实际上，块状元素都会以行的形式占据位置。</p>
+</li>
+<li><p>行内元素从左到右：在流动模型下，内联元素都会在所处的包含元素内从左到右水平分布显示。</p>
+</li>
+</ol>
+<h3 id="浮动布局模型"><a href="#浮动布局模型" class="headerlink" title="浮动布局模型"></a>浮动布局模型</h3><p>任何元素在默认情况下是不能浮动的，但可以用 CSS 定义为浮动，如 div、p、table、img 等元素都可以被定义为浮动。</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span>&#123;</span><br><span class="line">  <span class="attribute">width</span>:<span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">height</span>:<span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">border</span>:<span class="number">2px</span> red solid;</span><br><span class="line">  float:left; //设置浮动 </span><br><span class="line">&#125;</span><br><span class="line">&lt;div id=&quot;div1&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;div id=&quot;div2&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="层模型"><a href="#层模型" class="headerlink" title="层模型"></a>层模型</h3><p><strong>层模型有三种形式：</strong><br>1、绝对定位(position: absolute)<br>2、相对定位(position: relative)<br>3、固定定位(position: fixed)</p>
+<p>实质就是常用的定位</p>
+<h3 id="标准流-、定位-和浮动的区别"><a href="#标准流-、定位-和浮动的区别" class="headerlink" title="标准流 、定位 和浮动的区别"></a>标准流 、定位 和浮动的区别</h3><p>标准流 是指就是按按照盒子模型排布，是标准的文档流。</p>
+<p>定位和浮动都和文档流有很大区别，但是也有不同（重点）：</p>
+<p>二者之中最大的差别就是<strong>位置保留</strong>。<br>再简而言之，float只是行内的 左右的改变，如果后面的元素不清楚浮动clear:both的话 会影响后面元素的位置，而positon定位的影响比较广，既能定义个容器的定位也能定义一个容器里的任意定位，而不是像float一样处于一个平面级的，它是可认识改变的。尤其是position:absolute；和fixed2个都是固定任意位置，一个不随页面滚动而改变原来位置，一个随页面滚动而改变但相对位置不改变。</p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+        <tag>css 布局模式</tag>
       </tags>
   </entry>
   <entry>
@@ -770,6 +770,67 @@
       </tags>
   </entry>
   <entry>
+    <title>html简介</title>
+    <url>/2020/10/08/html%E7%AE%80%E4%BB%8B/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="html-简介"><a href="#html-简介" class="headerlink" title="html 简介"></a>html 简介</h1><p>html 是一种为创建网页的标准的标记语言</p>
+<h3 id="html-是什么？"><a href="#html-是什么？" class="headerlink" title="html 是什么？"></a>html 是什么？</h3><ul>
+<li>html 代表超文本标记语言。</li>
+<li>html 是为创建网页的标准的标记语言。</li>
+<li>html 描述网页结构。</li>
+<li>html 包含一系列的元素。</li>
+<li>html元素 告诉浏览器如何展示网页内容。</li>
+<li>html元素标签也是一系列内容， 例如：标题、段落、超链接，等等。</li>
+</ul>
+<h3 id="一个简单的-html-文件"><a href="#一个简单的-html-文件" class="headerlink" title="一个简单的 html 文件"></a>一个简单的 html 文件</h3><p>例子：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Page Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>My First Heading<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>My first paragraph.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>例子解释：</p>
+<ul>
+<li><p><code>&lt;!DOCTYPE html&gt;</code> 声明和定义这个文件是 html5 的文档</p>
+</li>
+<li><p><code>&lt;html&gt;</code>  标签元素是 html 网页的 根元素</p>
+</li>
+<li><p><code>&lt;head&gt;</code> 标签元素包含此网页的元信息，所谓元信息, 即告诉浏览器的一些信息。</p>
+</li>
+<li><p><code>&lt;title&gt;</code> 为此网页指定一个标题。</p>
+</li>
+<li><p><code>&lt;bady&gt;</code> 标签定义文档的“身体”，它是一个为了网页中所有可视化内容而生的容器，例如：各级标签，段落，图片，超链接，列表，表格等等。</p>
+</li>
+<li><p><code>&lt;h1&gt;</code> 定义一个最大的标题</p>
+</li>
+<li><p><code>&lt;p&gt;</code> 定义一个段落</p>
+</li>
+</ul>
+<h3 id="什么是-html-元素"><a href="#什么是-html-元素" class="headerlink" title="什么是 html 元素"></a>什么是 html 元素</h3><p>html 元素主要通过 开始标签，一些内容， 结束标签 ， 三个部分被定义</p>
+<p>大部分的 html 元素由开始标签开始 到结束标签结束</p>
+<p>大致如下面的代码：</p>
+<p><code>&lt;p&gt;My first paragraph.&lt;/p&gt;</code></p>
+<table>
+<thead>
+<tr>
+<th>开始标签</th>
+<th>内容</th>
+<th>结束标签</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>&lt;p&gt;</code></td>
+<td>My first paragraph.</td>
+<td><code>&lt;/p&gt;</code></td>
+</tr>
+</tbody></table>
+<p><strong>当然也有少数的标签是没有结束标签的， 它没有内容</strong>比如：<code>&lt;br&gt;</code> 这些元素叫做空元素，空元素没有结束标签。</p>
+<h3 id="网页浏览器"><a href="#网页浏览器" class="headerlink" title="网页浏览器"></a>网页浏览器</h3><p>流行的网页浏览器（Chrome, Edge, Firefox, Safari）都是为了读取 html 文件并正确的展示内容，浏览器不会展示 html 的标签， 但是他会使用 html 的标签 来确定怎么展示文件。</p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>html</tag>
+        <tag>html 简介</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>html基础例子</title>
     <url>/2020/10/13/html%E5%9F%BA%E7%A1%80%E4%BE%8B%E5%AD%90/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="html-基础例子"><a href="#html-基础例子" class="headerlink" title="html 基础例子"></a>html 基础例子</h1><h3 id="html-文件"><a href="#html-文件" class="headerlink" title="html 文件"></a>html 文件</h3><ul>
@@ -852,142 +913,6 @@
       <tags>
         <tag>html</tag>
         <tag>html 基础</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>html简介</title>
-    <url>/2020/10/08/html%E7%AE%80%E4%BB%8B/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="html-简介"><a href="#html-简介" class="headerlink" title="html 简介"></a>html 简介</h1><p>html 是一种为创建网页的标准的标记语言</p>
-<h3 id="html-是什么？"><a href="#html-是什么？" class="headerlink" title="html 是什么？"></a>html 是什么？</h3><ul>
-<li>html 代表超文本标记语言。</li>
-<li>html 是为创建网页的标准的标记语言。</li>
-<li>html 描述网页结构。</li>
-<li>html 包含一系列的元素。</li>
-<li>html元素 告诉浏览器如何展示网页内容。</li>
-<li>html元素标签也是一系列内容， 例如：标题、段落、超链接，等等。</li>
-</ul>
-<h3 id="一个简单的-html-文件"><a href="#一个简单的-html-文件" class="headerlink" title="一个简单的 html 文件"></a>一个简单的 html 文件</h3><p>例子：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Page Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>My First Heading<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>My first paragraph.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>例子解释：</p>
-<ul>
-<li><p><code>&lt;!DOCTYPE html&gt;</code> 声明和定义这个文件是 html5 的文档</p>
-</li>
-<li><p><code>&lt;html&gt;</code>  标签元素是 html 网页的 根元素</p>
-</li>
-<li><p><code>&lt;head&gt;</code> 标签元素包含此网页的元信息，所谓元信息, 即告诉浏览器的一些信息。</p>
-</li>
-<li><p><code>&lt;title&gt;</code> 为此网页指定一个标题。</p>
-</li>
-<li><p><code>&lt;bady&gt;</code> 标签定义文档的“身体”，它是一个为了网页中所有可视化内容而生的容器，例如：各级标签，段落，图片，超链接，列表，表格等等。</p>
-</li>
-<li><p><code>&lt;h1&gt;</code> 定义一个最大的标题</p>
-</li>
-<li><p><code>&lt;p&gt;</code> 定义一个段落</p>
-</li>
-</ul>
-<h3 id="什么是-html-元素"><a href="#什么是-html-元素" class="headerlink" title="什么是 html 元素"></a>什么是 html 元素</h3><p>html 元素主要通过 开始标签，一些内容， 结束标签 ， 三个部分被定义</p>
-<p>大部分的 html 元素由开始标签开始 到结束标签结束</p>
-<p>大致如下面的代码：</p>
-<p><code>&lt;p&gt;My first paragraph.&lt;/p&gt;</code></p>
-<table>
-<thead>
-<tr>
-<th>开始标签</th>
-<th>内容</th>
-<th>结束标签</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>&lt;p&gt;</code></td>
-<td>My first paragraph.</td>
-<td><code>&lt;/p&gt;</code></td>
-</tr>
-</tbody></table>
-<p><strong>当然也有少数的标签是没有结束标签的， 它没有内容</strong>比如：<code>&lt;br&gt;</code> 这些元素叫做空元素，空元素没有结束标签。</p>
-<h3 id="网页浏览器"><a href="#网页浏览器" class="headerlink" title="网页浏览器"></a>网页浏览器</h3><p>流行的网页浏览器（Chrome, Edge, Firefox, Safari）都是为了读取 html 文件并正确的展示内容，浏览器不会展示 html 的标签， 但是他会使用 html 的标签 来确定怎么展示文件。</p>
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>html</tag>
-        <tag>html 简介</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>html重要概念</title>
-    <url>/2020/10/12/html%E9%87%8D%E8%A6%81%E6%A6%82%E5%BF%B5/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="html-属性"><a href="#html-属性" class="headerlink" title="html 属性"></a>html 属性</h1><p>html 属性提供有关 html 的其他相关信息</p>
-<h3 id="html-属性-1"><a href="#html-属性-1" class="headerlink" title="html 属性"></a>html 属性</h3><ul>
-<li><p>所有 html 元素都可以有属性。</p>
-</li>
-<li><p>属性提供元素相关的信息。</p>
-</li>
-<li><p>属性始终在开始标签上使用。</p>
-</li>
-<li><p>属性通常用 名称=值 的方式出现，例如：name=”app”。</p>
-</li>
-</ul>
-<h3 id="html-标题"><a href="#html-标题" class="headerlink" title="html 标题"></a>html 标题</h3><p>HTML标题是使用<code>&lt;h1&gt;</code>to<code>&lt;h6&gt;</code>标记定义的。</p>
-<p><code>&lt;h1&gt;</code>定义最重要的标题。<code>&lt;h6&gt;</code>定义最不重要的标题。</p>
-<p><strong>注意：</strong> 浏览器会在标题的前后加上一些边距。在网页上显示一定的空白。</p>
-<h4 id="标题很重要"><a href="#标题很重要" class="headerlink" title="标题很重要"></a>标题很重要</h4><p>搜索引擎使用标题来索引网页的结构后内容。</p>
-<p>用户经常按页面的标题来浏览网页内容，显得变体很重要，<code>&lt;h1&gt;</code> 是主要标题，依次是次要标题 <code>&lt;h2&gt;</code> ,一直到最不重要的标题 <code>&lt;h6&gt;</code>。</p>
-<p><strong>注意：</strong> <strong>仅将html 标题用于标题，不要为了文本变大加粗而使用标题。</strong> <strong>总的来说就是html 元素的使用尽量的使用它的语义化 而不是表面上的样式</strong></p>
-<h3 id="标题的大小"><a href="#标题的大小" class="headerlink" title="标题的大小"></a>标题的大小</h3><p>每个标题都有默认的大小，但是标题的大小可以用标题的属性设置</p>
-<p>例子：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">style</span>=<span class="string">&quot;font-size:20px;&quot;</span>&gt;</span></span><br><span class="line">  一级标题</span><br><span class="line"><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>上面这段代码 语义还是最重要的标题，但是大小是自己设定的。</p>
-<h3 id="html-段落"><a href="#html-段落" class="headerlink" title="html 段落"></a>html 段落</h3><p>首先要明白 段落总是以换行开头，内容一般是文本。同样会在标题前后添加空白（边距）。</p>
-<p><strong>在段落中显示 还有在很多html 元素中显示文字 浏览器会自动的删除多余的空格和行</strong></p>
-<p>如果显示一下诗词排列：</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">葡萄美酒夜光杯，</span><br><span class="line"></span><br><span class="line">欲饮琵琶马上催。</span><br><span class="line"></span><br><span class="line">醉卧沙场君莫笑，</span><br><span class="line"></span><br><span class="line">古来征战几人回？</span><br><span class="line"></span><br><span class="line">		——唐代·王翰《凉州词》</span><br></pre></td></tr></table></figure>
-
-<p>一般我们会使用 换行符 进行排列。可以了解下：<code>&lt;pre&gt;</code> 的用法。</p>
-<p>例如： </p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">pre</span>&gt;</span></span><br><span class="line"> 	葡萄美酒夜光杯，</span><br><span class="line"></span><br><span class="line">	欲饮琵琶马上催。</span><br><span class="line"></span><br><span class="line">	醉卧沙场君莫笑，</span><br><span class="line"></span><br><span class="line">	古来征战几人回？</span><br><span class="line"></span><br><span class="line">		——唐代·王翰《凉州词》</span><br><span class="line"><span class="tag">&lt;/<span class="name">pre</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>使用这种不怎么常见的元素标签就能轻易实现，但是一般不会使用。了解即可。</p>
-<p>遵循的原则：先确定语义的HTML ，再选合适的CSS。</p>
-<h3 id="div-span-标签"><a href="#div-span-标签" class="headerlink" title="div span 标签"></a>div span 标签</h3><p>div  span    是没有语义的     是我们网页布局主要的2个盒子     css+div</p>
-<p>div 就是  division  的缩写   分割， 分区的意思  其实有很多div 来组合网页。</p>
-<p>span, 跨度，跨距；范围</p>
-<p>语法格式：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>我是div <span class="tag">&lt;/<span class="name">div</span>&gt;</span>    <span class="tag">&lt;<span class="name">span</span>&gt;</span>我是span<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="链接标签"><a href="#链接标签" class="headerlink" title="链接标签"></a>链接标签</h3><p>在HTML中创建超链接非常简单，只需用标签环绕需要被链接的对象即可，其基本语法格式如下：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;跳转目标&quot;</span> <span class="attr">target</span>=<span class="string">&quot;目标窗口的弹出方式&quot;</span>&gt;</span>文本或图像<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>一些必要属性的说明：</p>
-<p><strong>href</strong>：用于指定链接目标的url地址，当为标签应用href属性时，它就具有了超链接的功能。  Hypertext Reference的缩写。意思是超文本引用</p>
-<p><strong>target</strong>：用于指定链接页面的打开方式，其取值有_self 和_blank 两种，其中_self为默认值，_blank为在新窗口中打开方式。<br><strong>注意：</strong></p>
-<ol>
-<li><p>外部链接 需要添加  <a href="http://www.baidu.com/">www.baidu.com</a></p>
-</li>
-<li><p>内部链接 直接链接内部页面名称即可比如 <code>&lt; a href=&quot;index.html&quot;&gt;</code> 首页<code> &lt;/a &gt;</code></p>
-</li>
-<li><p>如果当时没有确定链接目标时，通常将链接标签的href属性值定义为“#”(即href=”#”)，表示该链接暂时为一个空链接。</p>
-</li>
-<li><p>不仅可以创建文本超链接，在网页中各种网页元素，如图像、表格、音频、视频等都可以添加超链接。</p>
-</li>
-</ol>
-<h3 id="锚点定位"><a href="#锚点定位" class="headerlink" title="锚点定位"></a>锚点定位</h3><p>通过创建锚点链接，用户能够快速定位到目标内容。<br>创建锚点链接分为两步：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#two&quot;</span>&gt;</span>   </span><br><span class="line">  </span><br><span class="line"><span class="tag">&lt;<span class="name">h3</span> <span class="attr">id</span>=<span class="string">&quot;two&quot;</span>&gt;</span>第2集<span class="tag">&lt;/<span class="name">h3</span>&gt;</span> </span><br></pre></td></tr></table></figure>
-<ol>
-<li><p>使用“a href=”#id名&gt;“链接文本”</a>创建链接文本（被点击的）</p>
-</li>
-<li><p>使用相应的id名标注跳转目标的位置。</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>html</tag>
-        <tag>html 重要概念</tag>
       </tags>
   </entry>
   <entry>
@@ -1376,6 +1301,200 @@
       <tags>
         <tag>数据库</tag>
         <tag>sql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>html重要概念</title>
+    <url>/2020/10/12/html%E9%87%8D%E8%A6%81%E6%A6%82%E5%BF%B5/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="html-属性"><a href="#html-属性" class="headerlink" title="html 属性"></a>html 属性</h1><p>html 属性提供有关 html 的其他相关信息</p>
+<h3 id="html-属性-1"><a href="#html-属性-1" class="headerlink" title="html 属性"></a>html 属性</h3><ul>
+<li><p>所有 html 元素都可以有属性。</p>
+</li>
+<li><p>属性提供元素相关的信息。</p>
+</li>
+<li><p>属性始终在开始标签上使用。</p>
+</li>
+<li><p>属性通常用 名称=值 的方式出现，例如：name=”app”。</p>
+</li>
+</ul>
+<h3 id="html-标题"><a href="#html-标题" class="headerlink" title="html 标题"></a>html 标题</h3><p>HTML标题是使用<code>&lt;h1&gt;</code>to<code>&lt;h6&gt;</code>标记定义的。</p>
+<p><code>&lt;h1&gt;</code>定义最重要的标题。<code>&lt;h6&gt;</code>定义最不重要的标题。</p>
+<p><strong>注意：</strong> 浏览器会在标题的前后加上一些边距。在网页上显示一定的空白。</p>
+<h4 id="标题很重要"><a href="#标题很重要" class="headerlink" title="标题很重要"></a>标题很重要</h4><p>搜索引擎使用标题来索引网页的结构后内容。</p>
+<p>用户经常按页面的标题来浏览网页内容，显得变体很重要，<code>&lt;h1&gt;</code> 是主要标题，依次是次要标题 <code>&lt;h2&gt;</code> ,一直到最不重要的标题 <code>&lt;h6&gt;</code>。</p>
+<p><strong>注意：</strong> <strong>仅将html 标题用于标题，不要为了文本变大加粗而使用标题。</strong> <strong>总的来说就是html 元素的使用尽量的使用它的语义化 而不是表面上的样式</strong></p>
+<h3 id="标题的大小"><a href="#标题的大小" class="headerlink" title="标题的大小"></a>标题的大小</h3><p>每个标题都有默认的大小，但是标题的大小可以用标题的属性设置</p>
+<p>例子：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">style</span>=<span class="string">&quot;font-size:20px;&quot;</span>&gt;</span></span><br><span class="line">  一级标题</span><br><span class="line"><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>上面这段代码 语义还是最重要的标题，但是大小是自己设定的。</p>
+<h3 id="html-段落"><a href="#html-段落" class="headerlink" title="html 段落"></a>html 段落</h3><p>首先要明白 段落总是以换行开头，内容一般是文本。同样会在标题前后添加空白（边距）。</p>
+<p><strong>在段落中显示 还有在很多html 元素中显示文字 浏览器会自动的删除多余的空格和行</strong></p>
+<p>如果显示一下诗词排列：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">葡萄美酒夜光杯，</span><br><span class="line"></span><br><span class="line">欲饮琵琶马上催。</span><br><span class="line"></span><br><span class="line">醉卧沙场君莫笑，</span><br><span class="line"></span><br><span class="line">古来征战几人回？</span><br><span class="line"></span><br><span class="line">		——唐代·王翰《凉州词》</span><br></pre></td></tr></table></figure>
+
+<p>一般我们会使用 换行符 进行排列。可以了解下：<code>&lt;pre&gt;</code> 的用法。</p>
+<p>例如： </p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">pre</span>&gt;</span></span><br><span class="line"> 	葡萄美酒夜光杯，</span><br><span class="line"></span><br><span class="line">	欲饮琵琶马上催。</span><br><span class="line"></span><br><span class="line">	醉卧沙场君莫笑，</span><br><span class="line"></span><br><span class="line">	古来征战几人回？</span><br><span class="line"></span><br><span class="line">		——唐代·王翰《凉州词》</span><br><span class="line"><span class="tag">&lt;/<span class="name">pre</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>使用这种不怎么常见的元素标签就能轻易实现，但是一般不会使用。了解即可。</p>
+<p>遵循的原则：先确定语义的HTML ，再选合适的CSS。</p>
+<h3 id="div-span-标签"><a href="#div-span-标签" class="headerlink" title="div span 标签"></a>div span 标签</h3><p>div  span    是没有语义的     是我们网页布局主要的2个盒子     css+div</p>
+<p>div 就是  division  的缩写   分割， 分区的意思  其实有很多div 来组合网页。</p>
+<p>span, 跨度，跨距；范围</p>
+<p>语法格式：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>我是div <span class="tag">&lt;/<span class="name">div</span>&gt;</span>    <span class="tag">&lt;<span class="name">span</span>&gt;</span>我是span<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="链接标签"><a href="#链接标签" class="headerlink" title="链接标签"></a>链接标签</h3><p>在HTML中创建超链接非常简单，只需用标签环绕需要被链接的对象即可，其基本语法格式如下：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;跳转目标&quot;</span> <span class="attr">target</span>=<span class="string">&quot;目标窗口的弹出方式&quot;</span>&gt;</span>文本或图像<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>一些必要属性的说明：</p>
+<p><strong>href</strong>：用于指定链接目标的url地址，当为标签应用href属性时，它就具有了超链接的功能。  Hypertext Reference的缩写。意思是超文本引用</p>
+<p><strong>target</strong>：用于指定链接页面的打开方式，其取值有_self 和_blank 两种，其中_self为默认值，_blank为在新窗口中打开方式。<br><strong>注意：</strong></p>
+<ol>
+<li><p>外部链接 需要添加  <a href="http://www.baidu.com/">www.baidu.com</a></p>
+</li>
+<li><p>内部链接 直接链接内部页面名称即可比如 <code>&lt; a href=&quot;index.html&quot;&gt;</code> 首页<code> &lt;/a &gt;</code></p>
+</li>
+<li><p>如果当时没有确定链接目标时，通常将链接标签的href属性值定义为“#”(即href=”#”)，表示该链接暂时为一个空链接。</p>
+</li>
+<li><p>不仅可以创建文本超链接，在网页中各种网页元素，如图像、表格、音频、视频等都可以添加超链接。</p>
+</li>
+</ol>
+<h3 id="锚点定位"><a href="#锚点定位" class="headerlink" title="锚点定位"></a>锚点定位</h3><p>通过创建锚点链接，用户能够快速定位到目标内容。<br>创建锚点链接分为两步：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#two&quot;</span>&gt;</span>   </span><br><span class="line">  </span><br><span class="line"><span class="tag">&lt;<span class="name">h3</span> <span class="attr">id</span>=<span class="string">&quot;two&quot;</span>&gt;</span>第2集<span class="tag">&lt;/<span class="name">h3</span>&gt;</span> </span><br></pre></td></tr></table></figure>
+<ol>
+<li><p>使用“a href=”#id名&gt;“链接文本”</a>创建链接文本（被点击的）</p>
+</li>
+<li><p>使用相应的id名标注跳转目标的位置。</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>html</tag>
+        <tag>html 重要概念</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据库基础基础操作</title>
+    <url>/2021/05/18/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="sql查询操作练习手册"><a href="#sql查询操作练习手册" class="headerlink" title="sql查询操作练习手册"></a>sql查询操作练习手册</h1><ol>
+<li><p>查询姓钱的学生</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> student <span class="keyword">where</span> student.name <span class="keyword">like</span> <span class="string">&#x27;钱%&#x27;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查询姓“钱”的学生</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> student <span class="keyword">WHERE</span> student.<span class="string">`姓名`</span> <span class="keyword">LIKE</span> <span class="string">&#x27;钱%&#x27;</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查询姓名中最后一个字带二的学生</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> student <span class="keyword">where</span> student.<span class="string">`姓名`</span> <span class="keyword">LIKE</span> <span class="string">&#x27;%二&#x27;</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查询姓名中带二的学生</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> student <span class="keyword">where</span> student.<span class="string">`姓名`</span> <span class="keyword">like</span> <span class="string">&#x27;%二%&#x27;</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查询姓黄教师的数量</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">count</span>(教师姓名) <span class="keyword">FROM</span> teacher <span class="keyword">where</span> teacher.<span class="string">`教师姓名`</span> <span class="keyword">like</span> <span class="string">&#x27;黄%&#x27;</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>汇总查询<br> 查询课程号为02 的总成绩</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">sum</span>(成绩) <span class="keyword">FROM</span> score <span class="keyword">WHERE</span> score.<span class="string">`课程号`</span> = <span class="string">&#x27;02&#x27;</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查询选了课程的学生人数  它的作用是：选择唯一的结果集，即去除重复记录。</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">count</span>(<span class="keyword">distinct</span>(学号)) <span class="keyword">from</span> score;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查询各科成绩最高和最低的分 分组查询 找到每组的最高和最低</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> 课程号,<span class="keyword">max</span>(成绩)<span class="keyword">as</span> 最高分,<span class="keyword">min</span>(成绩) <span class="keyword">as</span> 最低分 <span class="keyword">from</span> score <span class="keyword">group</span> <span class="keyword">by</span> 课程号;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查询每门课程被选修的学生数</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> 课程号,<span class="keyword">count</span>(学号) <span class="keyword">as</span> 选修的学生数 <span class="keyword">from</span> score <span class="keyword">group</span> <span class="keyword">by</span> 课程号;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查询男生、女生人数</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> 性别,<span class="keyword">count</span>(性别) <span class="keyword">as</span> 人数 <span class="keyword">from</span> student <span class="keyword">group</span> <span class="keyword">by</span> 性别;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查询平时成绩大于60分的学生的学号和平均成绩</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> 学号,<span class="keyword">avg</span>(成绩) <span class="keyword">as</span> 平均成绩 <span class="keyword">from</span> score </span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> 学号 <span class="keyword">having</span> <span class="keyword">avg</span>(成绩) &gt; <span class="number">60</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查询至少选修两门课程的学生学号</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> 学号 <span class="keyword">from</span> score <span class="keyword">group</span> <span class="keyword">by</span> 学号 <span class="keyword">having</span> <span class="keyword">count</span>(课程号) &gt;= <span class="number">2</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查询同名同姓学生名单并统计同名人数</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> 姓名,<span class="keyword">count</span>(*) <span class="keyword">as</span> 同名人数 <span class="keyword">from</span> student <span class="keyword">group</span> <span class="keyword">by</span> 姓名 <span class="keyword">having</span> <span class="keyword">count</span>(*)&gt;=<span class="number">2</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查询不及格的课程并按课程号从大到小排列</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> 课程号 <span class="keyword">as</span> 不及格的课程号 <span class="keyword">from</span> score <span class="keyword">where</span> 成绩 &lt; <span class="number">60</span> <span class="keyword">order</span> <span class="keyword">by</span> 课程号 <span class="keyword">desc</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查询至少选修两门课程的学生学号</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> 学号 <span class="keyword">from</span> score <span class="keyword">group</span> <span class="keyword">by</span> 学号 <span class="keyword">having</span> <span class="keyword">count</span>(课程号) &gt;= <span class="number">2</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查询同名同姓学生名单并统计同名人数</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> 姓名,<span class="keyword">count</span>(*) <span class="keyword">as</span> 同名人数 <span class="keyword">from</span> student <span class="keyword">group</span> <span class="keyword">by</span> 姓名 <span class="keyword">having</span> <span class="keyword">count</span>(*)&gt;=<span class="number">2</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查询不及格的课程并按课程号从大到小排列</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> 课程号 <span class="keyword">as</span> 不及格的课程号 <span class="keyword">from</span> score <span class="keyword">where</span> 成绩 &lt; <span class="number">60</span> <span class="keyword">order</span> <span class="keyword">by</span> 课程号 <span class="keyword">desc</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查询每门课程的平均成绩，结果按平均成绩升序排序，平均成绩相同时，按课程号降序排列</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> 课程号,<span class="keyword">avg</span>(成绩) <span class="keyword">as</span> 平均成绩 <span class="keyword">from</span> score </span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> 课程号 <span class="keyword">order</span> <span class="keyword">by</span> <span class="keyword">avg</span>(成绩)<span class="keyword">asc</span> ,课程号 <span class="keyword">desc</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>检索课程编号为“04”且分数小于60的学生学号，结果按分数降序排列</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> 学号,成绩 <span class="keyword">as</span> 不及格分数 <span class="keyword">from</span> score</span><br><span class="line"><span class="keyword">where</span> 课程号 = <span class="string">&#x27;01&#x27;</span> <span class="keyword">and</span> 成绩 &lt; <span class="number">60</span></span><br><span class="line"><span class="keyword">order</span> <span class="keyword">by</span> 成绩 <span class="keyword">desc</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>统计每门课程的学生选修人数(超过2人的课程才统计)，</p>
+</li>
+<li><p>要求输出课程号和选修人数，查询结果按人数降序排序，若人数相同，按课程号升序排序</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> 课程号,<span class="keyword">count</span>(学号) <span class="keyword">as</span> 选修人数 <span class="keyword">from</span> score</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> 课程号 <span class="keyword">having</span> <span class="keyword">count</span>(学号)&gt; <span class="number">2</span></span><br><span class="line"><span class="keyword">order</span> <span class="keyword">by</span> <span class="keyword">count</span>(学号) <span class="keyword">desc</span>,课程号 <span class="keyword">asc</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查询两门以上不及格课程同学的学号及其平均成绩</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> 学号,<span class="keyword">avg</span>(成绩) <span class="keyword">as</span> 平均成绩 <span class="keyword">from</span> score</span><br><span class="line"><span class="keyword">where</span> 成绩 &lt; <span class="number">60</span></span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> 学号</span><br><span class="line"><span class="keyword">having</span> <span class="keyword">count</span>(课程号)&gt;=<span class="number">2</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查询所有课程成绩小于60分学生的学号、姓名</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> 学号,姓名 <span class="keyword">from</span>  student</span><br><span class="line"><span class="keyword">where</span> 学号 <span class="keyword">in</span></span><br><span class="line">(<span class="keyword">select</span> 学号 <span class="keyword">from</span> score</span><br><span class="line"> <span class="keyword">where</span> 成绩 &lt;<span class="number">60</span> )</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查询没有学全所有课的学生的学号、姓名</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> 学号,姓名 <span class="keyword">from</span> student</span><br><span class="line"><span class="keyword">where</span> 学号 <span class="keyword">in</span></span><br><span class="line">(<span class="keyword">select</span> 学号 <span class="keyword">from</span> score</span><br><span class="line"> <span class="keyword">group</span> <span class="keyword">by</span> 学号</span><br><span class="line"> <span class="keyword">having</span> <span class="keyword">count</span>(课程号)&lt; (<span class="keyword">select</span> <span class="keyword">count</span>(课程号) <span class="keyword">from</span> course));</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查询出只选修了两门课程的全部学生的学号和姓名</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> 学号,姓名 <span class="keyword">from</span> student</span><br><span class="line"><span class="keyword">where</span> 学号 <span class="keyword">in</span> </span><br><span class="line">(<span class="keyword">select</span> 学号 <span class="keyword">from</span> score</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> 学号</span><br><span class="line"><span class="keyword">having</span> <span class="keyword">count</span>(课程号) = <span class="number">2</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>1980年出生的学生名单</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> 姓名 <span class="keyword">from</span> student</span><br><span class="line"><span class="keyword">where</span> <span class="keyword">year</span>(出生日期) = <span class="number">1980</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>每组最大的N条记录  LIMIT后的第一个参数是输出记录的初始位置，第二个参数偏移量，偏移多少，输出的条目就是多少。</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">(<span class="keyword">select</span> * <span class="keyword">from</span> score <span class="keyword">where</span> 课程号=<span class="string">&#x27;01&#x27;</span> <span class="keyword">order</span> <span class="keyword">by</span> 成绩 <span class="keyword">desc</span> <span class="keyword">limit</span> <span class="number">2</span>)</span><br><span class="line"><span class="keyword">union</span> <span class="keyword">all</span></span><br><span class="line">(<span class="keyword">select</span> * <span class="keyword">from</span> score <span class="keyword">where</span> 课程号=<span class="string">&#x27;02&#x27;</span> <span class="keyword">order</span> <span class="keyword">by</span> 成绩 <span class="keyword">desc</span> <span class="keyword">limit</span> <span class="number">2</span>)</span><br><span class="line"><span class="keyword">union</span> <span class="keyword">all</span></span><br><span class="line">(<span class="keyword">select</span> * <span class="keyword">from</span> score <span class="keyword">where</span> 课程号=<span class="string">&#x27;03&#x27;</span> <span class="keyword">order</span> <span class="keyword">by</span> 成绩 <span class="keyword">desc</span> <span class="keyword">limit</span> <span class="number">2</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查询所有学生的学号、姓名、选课数、总成绩</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> a.学号,a.姓名,<span class="keyword">count</span>(b.课程号) <span class="keyword">as</span> 选课数,<span class="keyword">sum</span>(成绩) <span class="keyword">as</span> 总成绩</span><br><span class="line"><span class="keyword">from</span> student <span class="keyword">as</span> a <span class="keyword">left</span> <span class="keyword">join</span> score <span class="keyword">as</span> b <span class="keyword">on</span> a.学号 = b.学号</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> a.学号;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查询平均成绩大于85的所有学生的学号、姓名和平均成绩</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> a.学号,a.姓名,<span class="keyword">avg</span>(b.成绩) <span class="keyword">as</span> 平均成绩</span><br><span class="line"><span class="keyword">from</span> student <span class="keyword">as</span> a <span class="keyword">right</span> <span class="keyword">join</span> score <span class="keyword">as</span> b <span class="keyword">on</span> a.学号 = b.学号</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> 学号</span><br><span class="line"><span class="keyword">having</span> <span class="keyword">avg</span>(b.成绩) &gt; <span class="number">85</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查询学生的选课情况：学号，姓名，课程号，课程名称</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> a.学号,a.姓名,c.课程号,c.课程名称</span><br><span class="line"><span class="keyword">from</span> student <span class="keyword">as</span> a <span class="keyword">left</span> <span class="keyword">join</span> score <span class="keyword">as</span> b <span class="keyword">on</span> a.学号 = b.学号</span><br><span class="line"><span class="keyword">left</span> <span class="keyword">join</span> course <span class="keyword">as</span> c <span class="keyword">on</span> b.课程号 = c.课程号;</span><br></pre></td></tr></table></figure>
+
+<p>left join 可以找出没有选课的， inner join 仅显示已经选课的情况</p>
+<p>left join 可以找出没有选课的， inner join 仅显示已经选课的情况</p>
+</li>
+<li><p>查询出每门课程的及格人数和不及格人数</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> 课程号,</span><br><span class="line"><span class="keyword">sum</span>(<span class="keyword">case</span> <span class="keyword">when</span> 成绩&gt;=<span class="number">60</span> <span class="keyword">then</span> <span class="number">1</span> <span class="keyword">else</span> <span class="number">0</span> <span class="keyword">end</span>)<span class="keyword">as</span> 及格人数,</span><br><span class="line"><span class="keyword">sum</span>(<span class="keyword">case</span> <span class="keyword">when</span> 成绩&lt;<span class="number">60</span> <span class="keyword">then</span> <span class="number">1</span> <span class="keyword">else</span> <span class="number">0</span> <span class="keyword">end</span>)<span class="keyword">as</span> 不及格人数</span><br><span class="line"><span class="keyword">from</span> score</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> 课程号</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>这里用的是sum ,求1的个数，不能用count，count会计算所有项数</p>
+</li>
+<li><p>使用分段[100-85],[85-70],[70-60],[‹60]来统计各科成绩，分别统计：各分数段人数，课程号和课程名称</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> c.课程号,c.课程名称,</span><br><span class="line"><span class="keyword">sum</span>(<span class="keyword">case</span> <span class="keyword">when</span> b.成绩 <span class="keyword">between</span> <span class="number">85</span> <span class="keyword">and</span> <span class="number">100</span> <span class="keyword">then</span> <span class="number">1</span> <span class="keyword">else</span> <span class="number">0</span> <span class="keyword">end</span>)<span class="keyword">as</span> <span class="string">&#x27;[100-85]&#x27;</span>,</span><br><span class="line"><span class="keyword">sum</span>(<span class="keyword">case</span> <span class="keyword">when</span> b.成绩&gt;=<span class="number">70</span> <span class="keyword">and</span> 成绩&lt;<span class="number">85</span> <span class="keyword">then</span> <span class="number">1</span> <span class="keyword">else</span> <span class="number">0</span> <span class="keyword">end</span>)<span class="keyword">as</span> <span class="string">&#x27;[85-70]&#x27;</span>,</span><br><span class="line"><span class="keyword">sum</span>(<span class="keyword">case</span> <span class="keyword">when</span> b.成绩&gt;=<span class="number">60</span> <span class="keyword">and</span> 成绩&lt;<span class="number">70</span> <span class="keyword">then</span> <span class="number">1</span> <span class="keyword">else</span> <span class="number">0</span> <span class="keyword">end</span>)<span class="keyword">as</span> <span class="string">&#x27;[70-60]&#x27;</span>,</span><br><span class="line"><span class="keyword">sum</span>(<span class="keyword">case</span> <span class="keyword">when</span> b.成绩&lt;<span class="number">60</span> <span class="keyword">then</span> <span class="number">1</span> <span class="keyword">else</span> <span class="number">0</span> <span class="keyword">end</span>)<span class="keyword">as</span> <span class="string">&#x27;[&lt;60]&#x27;</span></span><br><span class="line"><span class="keyword">from</span> score <span class="keyword">as</span> b <span class="keyword">left</span> <span class="keyword">join</span> course <span class="keyword">as</span> c <span class="keyword">on</span> b.课程号 = c.课程号</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> b.课程号;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查询课程编号为03且课程成绩在80分以上的学生的学号和姓名</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> a.学号,a.姓名</span><br><span class="line"><span class="keyword">from</span> student <span class="keyword">as</span> a <span class="keyword">right</span> <span class="keyword">join</span> score <span class="keyword">as</span> b <span class="keyword">on</span> a.学号 = b.学号</span><br><span class="line"><span class="keyword">where</span> b.课程号 = <span class="string">&#x27;03&#x27;</span> <span class="keyword">and</span> b.成绩 &gt;= <span class="number">80</span>;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>数据库</category>
+        <category>练习</category>
+      </categories>
+      <tags>
+        <tag>数据库</tag>
       </tags>
   </entry>
 </search>
