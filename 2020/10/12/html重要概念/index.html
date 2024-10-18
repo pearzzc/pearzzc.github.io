@@ -1,0 +1,331 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>html重要概念 | 学习笔记</title><meta name="author" content="pearzzc"><meta name="copyright" content="pearzzc"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="html 属性html 属性提供有关 html 的其他相关信息 html 属性 所有 html 元素都可以有属性。  属性提供元素相关的信息。  属性始终在开始标签上使用。  属性通常用 名称&#x3D;值 的方式出现，例如：name&#x3D;”app”。   html 标题HTML标题是使用&lt;h1&gt;to&lt;h6&gt;标记定义的。 &lt;h1&gt;定义最重要的标题。&lt;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="html重要概念">
+<meta property="og:url" content="http://pearzzc.github.io/2020/10/12/html%E9%87%8D%E8%A6%81%E6%A6%82%E5%BF%B5/index.html">
+<meta property="og:site_name" content="学习笔记">
+<meta property="og:description" content="html 属性html 属性提供有关 html 的其他相关信息 html 属性 所有 html 元素都可以有属性。  属性提供元素相关的信息。  属性始终在开始标签上使用。  属性通常用 名称&#x3D;值 的方式出现，例如：name&#x3D;”app”。   html 标题HTML标题是使用&lt;h1&gt;to&lt;h6&gt;标记定义的。 &lt;h1&gt;定义最重要的标题。&lt;">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://pearzzc.github.io/img/%E8%92%B2%E5%85%AC%E8%8B%B1.jpg">
+<meta property="article:published_time" content="2020-10-12T12:57:57.000Z">
+<meta property="article:modified_time" content="2021-02-12T10:08:49.000Z">
+<meta property="article:author" content="pearzzc">
+<meta property="article:tag" content="html">
+<meta property="article:tag" content="html 重要概念">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://pearzzc.github.io/img/%E8%92%B2%E5%85%AC%E8%8B%B1.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://pearzzc.github.io/2020/10/12/html%E9%87%8D%E8%A6%81%E6%A6%82%E5%BF%B5/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!true && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        if (name && globalFn[key][name]) return
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"简","msgToSimplifiedChinese":"繁"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":300,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: {"chs_to_cht":"已切换为繁体中文","cht_to_chs":"已切换为简体中文","day_to_night":"已切换为深色模式","night_to_day":"已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'html重要概念',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-02-12 18:08:49'
+}</script><style>#article-container.post-content h1:before, h2:before, h3:before, h4:before, h5:before, h6:before { -webkit-animation: avatar_turn_around 1s linear infinite; -moz-animation: avatar_turn_around 1s linear infinite; -o-animation: avatar_turn_around 1s linear infinite; -ms-animation: avatar_turn_around 1s linear infinite; animation: avatar_turn_around 1s linear infinite; } </style><style type="text/css">.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body{left:-66px!important}.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover{left:0!important}</style><meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg" style="background-image: url(/img/星空.jpg);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/aaa.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">15</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">17</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/galleryGroup/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/蒲公英.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/favicon.ico" alt="Logo"><span class="site-name">学习笔记</span></a><a class="nav-page-title" href="/"><span class="site-name">html重要概念</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/galleryGroup/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">html重要概念</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-10-12T12:57:57.000Z" title="发表于 2020-10-12 20:57:57">2020-10-12</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-02-12T10:08:49.000Z" title="更新于 2021-02-12 18:08:49">2021-02-12</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="html-属性"><a href="#html-属性" class="headerlink" title="html 属性"></a>html 属性</h1><p>html 属性提供有关 html 的其他相关信息</p>
+<h3 id="html-属性-1"><a href="#html-属性-1" class="headerlink" title="html 属性"></a>html 属性</h3><ul>
+<li><p>所有 html 元素都可以有属性。</p>
+</li>
+<li><p>属性提供元素相关的信息。</p>
+</li>
+<li><p>属性始终在开始标签上使用。</p>
+</li>
+<li><p>属性通常用 名称&#x3D;值 的方式出现，例如：name&#x3D;”app”。</p>
+</li>
+</ul>
+<h3 id="html-标题"><a href="#html-标题" class="headerlink" title="html 标题"></a>html 标题</h3><p>HTML标题是使用<code>&lt;h1&gt;</code>to<code>&lt;h6&gt;</code>标记定义的。</p>
+<p><code>&lt;h1&gt;</code>定义最重要的标题。<code>&lt;h6&gt;</code>定义最不重要的标题。</p>
+<p><strong>注意：</strong> 浏览器会在标题的前后加上一些边距。在网页上显示一定的空白。</p>
+<h4 id="标题很重要"><a href="#标题很重要" class="headerlink" title="标题很重要"></a>标题很重要</h4><p>搜索引擎使用标题来索引网页的结构后内容。</p>
+<p>用户经常按页面的标题来浏览网页内容，显得变体很重要，<code>&lt;h1&gt;</code> 是主要标题，依次是次要标题 <code>&lt;h2&gt;</code> ,一直到最不重要的标题 <code>&lt;h6&gt;</code>。</p>
+<p><strong>注意：</strong> <strong>仅将html 标题用于标题，不要为了文本变大加粗而使用标题。</strong> <strong>总的来说就是html 元素的使用尽量的使用它的语义化 而不是表面上的样式</strong></p>
+<h3 id="标题的大小"><a href="#标题的大小" class="headerlink" title="标题的大小"></a>标题的大小</h3><p>每个标题都有默认的大小，但是标题的大小可以用标题的属性设置</p>
+<p>例子：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">style</span>=<span class="string">&quot;font-size:20px;&quot;</span>&gt;</span></span><br><span class="line">  一级标题</span><br><span class="line"><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>上面这段代码 语义还是最重要的标题，但是大小是自己设定的。</p>
+<h3 id="html-段落"><a href="#html-段落" class="headerlink" title="html 段落"></a>html 段落</h3><p>首先要明白 段落总是以换行开头，内容一般是文本。同样会在标题前后添加空白（边距）。</p>
+<p><strong>在段落中显示 还有在很多html 元素中显示文字 浏览器会自动的删除多余的空格和行</strong></p>
+<p>如果显示一下诗词排列：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">葡萄美酒夜光杯，</span><br><span class="line"></span><br><span class="line">欲饮琵琶马上催。</span><br><span class="line"></span><br><span class="line">醉卧沙场君莫笑，</span><br><span class="line"></span><br><span class="line">古来征战几人回？</span><br><span class="line"></span><br><span class="line">		——唐代·王翰《凉州词》</span><br></pre></td></tr></table></figure>
+
+<p>一般我们会使用 换行符 进行排列。可以了解下：<code>&lt;pre&gt;</code> 的用法。</p>
+<p>例如： </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">pre</span>&gt;</span></span><br><span class="line"> 	葡萄美酒夜光杯，</span><br><span class="line"></span><br><span class="line">	欲饮琵琶马上催。</span><br><span class="line"></span><br><span class="line">	醉卧沙场君莫笑，</span><br><span class="line"></span><br><span class="line">	古来征战几人回？</span><br><span class="line"></span><br><span class="line">		——唐代·王翰《凉州词》</span><br><span class="line"><span class="tag">&lt;/<span class="name">pre</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>使用这种不怎么常见的元素标签就能轻易实现，但是一般不会使用。了解即可。</p>
+<p>遵循的原则：先确定语义的HTML ，再选合适的CSS。</p>
+<h3 id="div-span-标签"><a href="#div-span-标签" class="headerlink" title="div span 标签"></a>div span 标签</h3><p>div  span    是没有语义的     是我们网页布局主要的2个盒子     css+div</p>
+<p>div 就是  division  的缩写   分割， 分区的意思  其实有很多div 来组合网页。</p>
+<p>span, 跨度，跨距；范围</p>
+<p>语法格式：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>我是div <span class="tag">&lt;/<span class="name">div</span>&gt;</span>    <span class="tag">&lt;<span class="name">span</span>&gt;</span>我是span<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="链接标签"><a href="#链接标签" class="headerlink" title="链接标签"></a>链接标签</h3><p>在HTML中创建超链接非常简单，只需用标签环绕需要被链接的对象即可，其基本语法格式如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;跳转目标&quot;</span> <span class="attr">target</span>=<span class="string">&quot;目标窗口的弹出方式&quot;</span>&gt;</span>文本或图像<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>一些必要属性的说明：</p>
+<p><strong>href</strong>：用于指定链接目标的url地址，当为标签应用href属性时，它就具有了超链接的功能。  Hypertext Reference的缩写。意思是超文本引用</p>
+<p><strong>target</strong>：用于指定链接页面的打开方式，其取值有_self 和_blank 两种，其中_self为默认值，_blank为在新窗口中打开方式。<br><strong>注意：</strong></p>
+<ol>
+<li><p>外部链接 需要添加  <a target="_blank" rel="noopener" href="http://www.baidu.com/">www.baidu.com</a></p>
+</li>
+<li><p>内部链接 直接链接内部页面名称即可比如 <code>&lt; a href=&quot;index.html&quot;&gt;</code> 首页<code> &lt;/a &gt;</code></p>
+</li>
+<li><p>如果当时没有确定链接目标时，通常将链接标签的href属性值定义为“#”(即href&#x3D;”#”)，表示该链接暂时为一个空链接。</p>
+</li>
+<li><p>不仅可以创建文本超链接，在网页中各种网页元素，如图像、表格、音频、视频等都可以添加超链接。</p>
+</li>
+</ol>
+<h3 id="锚点定位"><a href="#锚点定位" class="headerlink" title="锚点定位"></a>锚点定位</h3><p>通过创建锚点链接，用户能够快速定位到目标内容。<br>创建锚点链接分为两步：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#two&quot;</span>&gt;</span>   </span><br><span class="line">  </span><br><span class="line"><span class="tag">&lt;<span class="name">h3</span> <span class="attr">id</span>=<span class="string">&quot;two&quot;</span>&gt;</span>第2集<span class="tag">&lt;/<span class="name">h3</span>&gt;</span> </span><br></pre></td></tr></table></figure>
+<ol>
+<li><p>使用“a href&#x3D;”#id名&gt;“链接文本”</a>创建链接文本（被点击的）</p>
+</li>
+<li><p>使用相应的id名标注跳转目标的位置。</p>
+</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://pearzzc.github.io">pearzzc</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://pearzzc.github.io/2020/10/12/html%E9%87%8D%E8%A6%81%E6%A6%82%E5%BF%B5/">http://pearzzc.github.io/2020/10/12/html%E9%87%8D%E8%A6%81%E6%A6%82%E5%BF%B5/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://pearzzc.github.io" target="_blank">学习笔记</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/html/">html</a><a class="post-meta__tags" href="/tags/html-%E9%87%8D%E8%A6%81%E6%A6%82%E5%BF%B5/">html 重要概念</a></div><div class="post-share"><div class="social-share" data-image="/img/%E8%92%B2%E5%85%AC%E8%8B%B1.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="prev-post pull-left" href="/2020/10/13/html%E5%9F%BA%E7%A1%80%E4%BE%8B%E5%AD%90/" title="html基础例子"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/%E8%92%B2%E5%85%AC%E8%8B%B1.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">html基础例子</div></div></a><a class="next-post pull-right" href="/2020/10/08/html%E7%AE%80%E4%BB%8B/" title="html简介"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/%E7%BE%8E%E5%A5%B3.jpeg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">html简介</div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a href="/2020/10/13/html%E5%9F%BA%E7%A1%80%E4%BE%8B%E5%AD%90/" title="html基础例子"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/%E8%92%B2%E5%85%AC%E8%8B%B1.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-10-13</div><div class="title">html基础例子</div></div></a><a href="/2020/10/08/html%E7%AE%80%E4%BB%8B/" title="html简介"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/%E7%BE%8E%E5%A5%B3.jpeg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-10-08</div><div class="title">html简介</div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/aaa.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">pearzzc</div><div class="author-info-description">这就是笔记</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">15</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">17</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/pearzzc"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog！</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#html-%E5%B1%9E%E6%80%A7"><span class="toc-number">1.</span> <span class="toc-text">html 属性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#html-%E5%B1%9E%E6%80%A7-1"><span class="toc-number">1.0.1.</span> <span class="toc-text">html 属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#html-%E6%A0%87%E9%A2%98"><span class="toc-number">1.0.2.</span> <span class="toc-text">html 标题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%87%E9%A2%98%E5%BE%88%E9%87%8D%E8%A6%81"><span class="toc-number">1.0.2.1.</span> <span class="toc-text">标题很重要</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E9%A2%98%E7%9A%84%E5%A4%A7%E5%B0%8F"><span class="toc-number">1.0.3.</span> <span class="toc-text">标题的大小</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#html-%E6%AE%B5%E8%90%BD"><span class="toc-number">1.0.4.</span> <span class="toc-text">html 段落</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#div-span-%E6%A0%87%E7%AD%BE"><span class="toc-number">1.0.5.</span> <span class="toc-text">div span 标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%93%BE%E6%8E%A5%E6%A0%87%E7%AD%BE"><span class="toc-number">1.0.6.</span> <span class="toc-text">链接标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%94%9A%E7%82%B9%E5%AE%9A%E4%BD%8D"><span class="toc-number">1.0.7.</span> <span class="toc-text">锚点定位</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/10/18/win10%E8%BD%AF%E4%BB%B6/" title="win10软件"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/%E8%92%B2%E5%85%AC%E8%8B%B1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="win10软件"/></a><div class="content"><a class="title" href="/2024/10/18/win10%E8%BD%AF%E4%BB%B6/" title="win10软件">win10软件</a><time datetime="2024-10-18T11:53:23.000Z" title="发表于 2024-10-18 19:53:23">2024-10-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/10/18/hello-world/" title="我的导航"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/%E7%BE%8E%E5%A5%B3.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="我的导航"/></a><div class="content"><a class="title" href="/2024/10/18/hello-world/" title="我的导航">我的导航</a><time datetime="2024-10-18T10:28:49.897Z" title="发表于 2024-10-18 18:28:49">2024-10-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/11/15/xlwings%E6%93%8D%E6%8E%A7excel%E8%A1%A8%E6%A0%BC/" title="xlwings操控excel表格"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/%E7%9F%B3%E5%A4%B4.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="xlwings操控excel表格"/></a><div class="content"><a class="title" href="/2020/11/15/xlwings%E6%93%8D%E6%8E%A7excel%E8%A1%A8%E6%A0%BC/" title="xlwings操控excel表格">xlwings操控excel表格</a><time datetime="2020-11-15T02:59:23.000Z" title="发表于 2020-11-15 10:59:23">2020-11-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/11/05/cssBFC%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E7%82%B9/" title="css盒子模型(BFC)"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/%E8%8D%89.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="css盒子模型(BFC)"/></a><div class="content"><a class="title" href="/2020/11/05/cssBFC%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E7%82%B9/" title="css盒子模型(BFC)">css盒子模型(BFC)</a><time datetime="2020-11-05T04:56:48.000Z" title="发表于 2020-11-05 12:56:48">2020-11-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/10/25/css%E8%83%8C%E6%99%AF-%E6%96%87%E5%AD%97-%E5%AD%97%E4%BD%93/" title="css背景-文字-字体"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/%E8%92%B2%E5%85%AC%E8%8B%B1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="css背景-文字-字体"/></a><div class="content"><a class="title" href="/2020/10/25/css%E8%83%8C%E6%99%AF-%E6%96%87%E5%AD%97-%E5%AD%97%E4%BD%93/" title="css背景-文字-字体">css背景-文字-字体</a><time datetime="2020-10-25T06:57:42.000Z" title="发表于 2020-10-25 14:57:42">2020-10-25</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/img/蒲公英.jpg);"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2024 By pearzzc</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a target="_blank" rel="noopener" href="https://butterfly.js.org/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"><script>(() => {
+  const runMermaid = ele => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    ele.forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = `%%{init:{ 'theme':'${theme}'}}%%\n`
+      const mermaidID = `mermaid-${index}`
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+      const renderMermaid = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      // mermaid v9 and v10 compatibility
+      typeof renderFn === 'string' ? renderMermaid(renderFn) : renderFn.then(({ svg }) => renderMermaid(svg))
+    })
+  }
+
+  const codeToMermaid = () => {
+    const codeMermaidEle = document.querySelectorAll('pre > code.mermaid')
+    if (codeMermaidEle.length === 0) return
+
+    codeMermaidEle.forEach(ele => {
+      const preEle = document.createElement('pre')
+      preEle.className = 'mermaid-src'
+      preEle.hidden = true
+      preEle.textContent = ele.textContent
+      const newEle = document.createElement('div')
+      newEle.className = 'mermaid-wrap'
+      newEle.appendChild(preEle)
+      ele.parentNode.replaceWith(newEle)
+    })
+  }
+
+  const loadMermaid = () => {
+    if (true) codeToMermaid()
+    const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+    if ($mermaid.length === 0) return
+
+    const runMermaidFn = () => runMermaid($mermaid)
+    btf.addGlobalFn('themeChange', runMermaidFn, 'mermaid')
+    window.loadMermaid ? runMermaidFn() : btf.getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaidFn)
+  }
+
+  btf.addGlobalFn('encrypt', loadMermaid, 'mermaid')
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script></div><div class="aplayer no-destroy" data-id="1995244832" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true" order="random"> </div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="false"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script>(() => {
+  const destroyAplayer = () => {
+    if (window.aplayers) {
+      for (let i = 0; i < window.aplayers.length; i++) {
+        if (!window.aplayers[i].options.fixed) {
+          window.aplayers[i].destroy()
+        }
+      }
+    }
+  }
+
+  const runMetingJS = () => {
+    typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+  }
+
+  btf.addGlobalFn('pjaxSend', destroyAplayer, 'destroyAplayer')
+  btf.addGlobalFn('pjaxComplete', loadMeting, 'runMetingJS')
+})()</script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>(() => {
+  const pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+  window.pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+  })
+
+  const triggerPjaxFn = (val) => {
+    if (!val) return
+    Object.values(val).forEach(fn => fn())
+  }
+
+  document.addEventListener('pjax:send', () => {
+    // removeEventListener
+    btf.removeGlobalFnEvent('pjaxSendOnce')
+    btf.removeGlobalFnEvent('themeChange')
+
+    // reset readmode
+    const $bodyClassList = document.body.classList
+    if ($bodyClassList.contains('read-mode')) $bodyClassList.remove('read-mode')
+
+    triggerPjaxFn(window.globalFn.pjaxSend)
+  })
+
+  document.addEventListener('pjax:complete', () => {
+    btf.removeGlobalFnEvent('pjaxCompleteOnce')
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || item.innerHTML || ""
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+    })
+
+    triggerPjaxFn(window.globalFn.pjaxComplete)
+  })
+
+  document.addEventListener('pjax:error', e => {
+    if (e.request.status === 404) {
+      pjax.loadUrl('/404.html')
+    }
+  })
+})()</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
